@@ -1,0 +1,27 @@
+#services {
+  display: flex;
+  justify-content: space-between;
+}
+
+#cards .card-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: -4em;
+}
+
+
+#car-content {
+  width: 100%;
+  height: 660px;
+  background-image: var('../../');
+  background-color: red;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  #services {
+    flex-direction: column;
+  }
+}
