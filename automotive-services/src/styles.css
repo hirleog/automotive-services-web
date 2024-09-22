@@ -26,6 +26,17 @@ body {
   /* Oculta a barra de rolagem no Firefox */
 }
 
+h1, h2, h3, h4 {
+  font-family: 'Oxanium', sans-serif;
+}
+h4 {
+  font-size: 28px;
+}
+p {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 16px;
+}
+
 :root {
   --primary: #ff3d24;
   --primary-dark: #ad2c1b;
