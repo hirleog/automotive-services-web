@@ -1,0 +1,26 @@
+<section class="spacement">
+  <div class="video-background">
+    <video *ngIf="isVideoPlaying" #bannerVideo autoplay loop muted plays-inline></video>
+    <video autoplay loop muted playsinline>
+      <source src="../../../assets/hero-video2.mp4" type="video/mp4" />
+      Seu navegador não suporta vídeos em HTML5.
+    </video>
+    <!-- *ngIf="!isVideoPlaying"  -->
+    <img src="../../../assets/banner-audi.svg" alt="Banner Fallback" />
+
+    <div class="content container">
+      <h1>
+        <span class="highlight">Estética</span><br />
+        Automotiva de <span class="highlight">Alto</span> Padrão
+      </h1>
+      <p class="pb-3" style="font-size: larger">
+        serviços de reparo e automóveis para garantir que seu veículo tenha o
+        melhor desempenho.<br />Nosso equipe qualificada de técnicos
+        certificados.
+      </p>
+      <button type="button" class="btn btn-primary btn-lg ui-button mr-5">
+        Large button
+      </button>
+    </div>
+  </div>
+</section>

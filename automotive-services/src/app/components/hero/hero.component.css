@@ -1,0 +1,77 @@
+.bg-image {
+  /* background-image: url('./../../../assets/hero.png');  */
+}
+
+.hero-content {
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  /* padding: 2rem;
+  max-width: 600px; */
+}
+
+
+/* Define o estilo para o vídeo */
+.video-background video {
+  /* background-color: red;
+  position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Faz com que o vídeo preencha o container sem distorção */
+  z-index: -1;
+  /* Coloca o vídeo atrás do conteúdo */
+  position: absolute;
+}
+
+.video-background img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Faz com que o vídeo preencha o container sem distorção */
+  z-index: -1;
+  /* Coloca o vídeo atrás do conteúdo */
+  position: absolute;
+}
+
+/* Estilo da seção de vídeo */
+.video-background {
+  /* position: relative; */
+  position: sticky;
+  width: 100%;
+  height: 96vh;
+
+
+  /* Flexbox para centralização */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.video-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Efeito escuro com 50% de transparência */
+  z-index: 0; /* Coloca o overlay atrás do conteúdo, mas sobre o vídeo */
+}
+
+
+/* Conteúdo sobre o vídeo */
+.content {
+  position: relative;
+  color: var(--light);
+  text-align: center;
+  /* padding-top: 43vh; */
+  color: wheat;
+  text-align: start;
+}

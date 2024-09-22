@@ -1,0 +1,40 @@
+.about-content {
+  display: flex;
+}
+
+.left-content {
+  padding-right: 60px;
+}
+
+.cards {
+  display: flex;
+}
+
+.cards img {
+  width: 80%;
+}
+
+#ui-card {
+  text-align: center;
+  color: white;
+  padding: 45px 35px;
+  background-color: #000000;
+  width: 100%;
+}
+
+#ui-card i {
+  color: white;
+  background-color: var(--primary);
+  font-size: 30px;
+  left: 50%;
+  top: 50%;
+  background-color: #ff3d24b3;
+  border-radius: 100%;
+
+}
+
+@media screen and (max-width: 768px) {
+  #about {
+    flex-direction: column;
+  }
+}
