@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+html {
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+body {
+
+  overflow: hidden;
+
+  max-width: 100%;
+
+  background: var(--secondary);
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /* Oculta a barra de rolagem no Firefox */
+}
+
+:root {
+  --primary: #ff3d24;
+  --primary-dark: #ad2c1b;
+
+  --secondary: #0f0f0f;
+  --secondary-transparent: #00000079;
+  --secondary-light: rgba(24, 24, 24, 0.986);
+  --light: white;
+  --medium: #cacacabd;
+  --dark: #a2a2a2;
+
+}

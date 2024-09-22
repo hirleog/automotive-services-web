@@ -1,0 +1,126 @@
+<!-- NAVBAR -->
+<nav
+
+  [ngClass]="{ scrolled: scrolled }"
+  data-aos="fade-down"
+  class="navbar navbar-expand-lg navbar-light"
+>
+  <div class="collapse navbar-collapse" data-aos="fade-down" data-aos-duration="1000" id="ajustes">
+    <div
+      id="burger"
+      style="display: flex; justify-content: flex-start; padding-top: -10px"
+    >
+      <i data-aos="fade-down" (click)="menu()" class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="navbar-brand" style="display: flex">
+      <div class="container">
+        <a href="#inicio">
+          <img
+          src="../../../assets/molinari-logo.png"
+            class="container-fluid"
+            alt="error"
+            style="width: 10em"
+          />
+        </a>
+      </div>
+    </div>
+
+    <div id="fake"></div>
+  </div>
+
+  <div class="hide-menu" style="display: flex; justify-content: flex-start">
+    <ul class="navbar-nav me-auto mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#inicio"
+          >Pagina Inicial</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#servicos"
+          >Serviços</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#who-iam">Sobre</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#what-people-say"
+          >Clientes</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#contato"
+          >Contato</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <!-- <div class="icons-redes">
+            <div>
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div> -->
+</nav>
+<div data-aos="fade-right" class="side-bar" *ngIf="openClose">
+  <div class="container">
+    <div>
+      <ul class="navbar-nav">
+        <li class="side-item">
+          <a
+            (click)="menu()"
+            class="nav-link active"
+            aria-current="page"
+            href="#inicio"
+            >Pagina Inicial</a
+          >
+        </li>
+        <li class="side-item">
+          <a
+            (click)="menu()"
+            class="nav-link active"
+            aria-current="page"
+            href="#servicos"
+            >Serviços</a
+          >
+        </li>
+        <li class="side-item">
+          <a
+            (click)="menu()"
+            class="nav-link active"
+            aria-current="page"
+            href="#who-iam"
+            >Sobre</a
+          >
+        </li>
+        <li class="side-item">
+          <a
+            (click)="menu()"
+            class="nav-link active"
+            aria-current="page"
+            href="#what-people-say"
+            >Clientes</a
+          >
+        </li>
+        <li class="side-item">
+          <a
+            (click)="menu()"
+            class="nav-link active"
+            aria-current="page"
+            href="#contato"
+            >Contato</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
