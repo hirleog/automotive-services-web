@@ -8,10 +8,21 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 export class HeroComponent implements OnInit {
   @ViewChild('bannerVideo') bannerVideo!: ElementRef;
   isVideoPlaying: boolean = true;  // Flag para controlar se o vídeo está sendo exibido
-
+  loading: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+    // Adiciona a classe 'fade-in' ao banner quando o componente é inicializado
+    const banner = document.getElementById('banner');
+    const bannerText = document.getElementById('banner-text');
+
+    // Aplica o efeito de fade-in no banner e no texto após um pequeno atraso
+    if (banner && bannerText) {
+      setTimeout(() => {
+        banner.classList.add('fade-in');
+        bannerText.classList.add('fade-in');
+      }, 100); // Um pequeno atraso antes de aplicar o fade-in
+    }
   }
 
   ngAfterViewInit() {

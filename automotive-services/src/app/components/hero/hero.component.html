@@ -1,14 +1,14 @@
 <section class="spacement">
-  <div class="video-background">
+  <div id="banner" class="video-background">
     <video *ngIf="isVideoPlaying" #bannerVideo autoplay loop muted plays-inline></video>
     <video autoplay loop muted playsinline>
       <source src="../../../assets/hero-video2.mp4" type="video/mp4" />
       Seu navegador não suporta vídeos em HTML5.
     </video>
-    <!-- *ngIf="!isVideoPlaying"  -->
-    <img src="../../../assets/banner-audi.svg" alt="Banner Fallback" />
+     
+    <img *ngIf="!isVideoPlaying" src="../../../assets/porche-banner.webp" alt="Banner Fallback" />
 
-    <div class="content container">
+    <div id="banner-text" class="content container">
       <h1>
         <span class="highlight">Estética</span><br />
         Automotiva de <span class="highlight">Alto</span> Padrão

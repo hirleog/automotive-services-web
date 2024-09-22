@@ -47,13 +47,17 @@
   position: sticky;
   width: 100%;
   height: 96vh;
-
+  opacity: 0;
+  /* Inicialmente invisível */
+  transition: opacity 2s ease;
+  /* Transição suave da opacidade em 2 segundos */
 
   /* Flexbox para centralização */
   display: flex;
   justify-content: start;
   align-items: center;
 }
+
 .video-background::before {
   content: '';
   position: absolute;
@@ -61,17 +65,23 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Efeito escuro com 50% de transparência */
-  z-index: 0; /* Coloca o overlay atrás do conteúdo, mas sobre o vídeo */
+  background: rgba(0, 0, 0, 0.5);
+  /* Efeito escuro com 50% de transparência */
+  z-index: 0;
+  /* Coloca o overlay atrás do conteúdo, mas sobre o vídeo */
 }
-
 
 /* Conteúdo sobre o vídeo */
 .content {
   position: relative;
   color: var(--light);
   text-align: center;
-  /* padding-top: 43vh; */
   color: wheat;
   text-align: start;
+
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+.fade-in {
+  opacity: 1;
 }

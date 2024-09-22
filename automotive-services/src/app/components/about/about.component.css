@@ -33,8 +33,8 @@
 
 }
 
-@media screen and (max-width: 768px) {
-  #about {
+@media (max-width: 998px) {
+  .about-content {
     flex-direction: column;
   }
 }
