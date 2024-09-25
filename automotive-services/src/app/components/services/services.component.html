@@ -1,26 +1,35 @@
 <section id="services" class="container spacement">
-  <div class="">
+  <div id="service-title" class="container   col-xxl-4 ">
     <img src="../../../assets/service-h1.svg" class="img-fluid mb-5" alt="" />
 
     <!-- <a href="">Ver TODOS SERVIÇOS</a> -->
   </div>
 
-  <div id="cards" class="container">
-    <div class="service-card col-lg-12 col-md-12 col-sm-12 mb-4">
-      <div>
-        <img src="../../../assets/service-card.svg" class=" ak-bg" alt="Card Image" />
+  <div id="cards">
+
+    <ng-container class=" col-xxl-8 container" *ngFor="let card of cards" >
+
+      <div class="pb-5">
+        <div class="service-card  col-lg-12 col-md-12 col-sm-12 mb-4">
+          <div>
+            <img [src]="card.image" class=" ak-bg" alt="Card Image" />
+          </div>
+
+          <div class="">
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.description }}</p>
+            <a href="">Ver mais</a>
+
+          </div>
+        </div>
       </div>
 
-      <div class="">
-        <h3>Vitrificação de Pintura</h3>
-        <p>Aplicação de uma camada protetora de cerâmica
-          líquida, que aumenta a resistência da pintura contra
-          riscos, sujeira e agentes climáticos.</p>
-        <a href="">Ver mais</a>
-
-      </div>
-    </div>
-
-
+    </ng-container>
   </div>
+
 </section>
+
+
+<div id="sub-banner" class="img-fluid">
+  <img src="../../../assets/carro-sub-banner.svg" alt="">
+</div>

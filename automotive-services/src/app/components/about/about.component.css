@@ -2,10 +2,6 @@
   display: flex;
 }
 
-.left-content {
-  padding-right: 60px;
-}
-
 .cards {
   display: flex;
 }
@@ -33,8 +29,14 @@
 
 }
 
+/* 
+ */
+
 @media (max-width: 998px) {
   .about-content {
     flex-direction: column;
+  }
+  .left-content {
+    /* padding-right: 60px; */
   }
 }
