@@ -5,17 +5,15 @@
     <!-- <a href="">Ver TODOS SERVIÇOS</a> -->
   </div>
 
-  <div id="cards" class="col-xxl-8 container">
-    <div class="service-card col-lg-12 col-md-12 col-sm-12 mb-4">
+  <div id="cards" class="col-xxl-8 pb-4 container" *ngFor="let card of cards">
+    <div class="service-card  col-lg-12 col-md-12 col-sm-12 mb-4">
       <div>
-        <img src="../../../assets/service-card.svg" class=" ak-bg" alt="Card Image" />
+        <img [src]="card.image" class=" ak-bg" alt="Card Image" />
       </div>
 
       <div class="">
-        <h3>Vitrificação de Pintura</h3>
-        <p>Aplicação de uma camada protetora de cerâmica
-          líquida, que aumenta a resistência da pintura contra
-          riscos, sujeira e agentes climáticos.</p>
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.description }}</p>
         <a href="">Ver mais</a>
 
       </div>
