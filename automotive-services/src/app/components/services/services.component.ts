@@ -14,19 +14,19 @@ export class ServicesComponent implements OnInit {
         image: '../../../assets/service-card.svg',
         title: 'Vitrificação de Pintura',
         description: 'Aplicação de uma camada protetora de cerâmica líquida, que aumenta a resistência da pintura contra riscos, sujeira e agentes climáticos.',
-        link: '#'
+        // link: '#'
       },
       {
-        image: 'https://via.placeholder.com/150',
-        title: 'Serviço 2',
-        description: 'Descrição do serviço 2. O melhor tratamento para o seu veículo.',
-        link: '#'
+        image: '../../../assets/card2.svg',
+        title: 'Polimento Automotivo',
+        description: 'Restauração do brilho da pintura, removendo pequenos riscos e imperfeições para um acabamento liso e reluzente.',
+        // link: '#'
       },
       {
-        image: 'https://via.placeholder.com/150',
-        title: 'Serviço 3',
-        description: 'Descrição do serviço 3. Garantimos qualidade e eficiência.',
-        link: '#'
+        image: '../../../assets/card3.svg',
+        title: 'Impermeabilização de Estofados',
+        description: 'Aplicação de um produto que protege os tecidos e couro contra manchas e sujeiras, facilitando a limpeza e prolongando a vida útil dos materiais.',
+        // link: '#'
       }
     ];
 
