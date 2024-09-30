@@ -11,7 +11,7 @@ export class ServicesComponent implements OnInit {
   constructor() {
     this.cards = [
       {
-        image: '../../../assets/service-card.svg',
+        image: '../../../assets/card1.svg',
         title: 'Vitrificação de Pintura',
         description: 'Aplicação de uma camada protetora de cerâmica líquida, que aumenta a resistência da pintura contra riscos, sujeira e agentes climáticos.',
         // link: '#'
