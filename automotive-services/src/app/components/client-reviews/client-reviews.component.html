@@ -1,0 +1,99 @@
+<section id="reviews" class="container spacement">
+    <div id="header-review" class="spacement">
+        <div class="details">
+            <h1>10+</h1>
+            <p>ANOS DE SERVIÇO</p>
+        </div>
+        <div class="details">
+            <h1>10+</h1>
+            <p>CLIENTES FELIZES</p>
+        </div>
+        <div class="details">
+            <h1>10+</h1>
+            <p>SATISFAÇÃO DO CLIENTE</p>
+        </div>
+    </div>
+</section>
+
+<section id="review spacement">
+
+    <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators (optional) -->
+        <ol class="carousel-indicators">
+            <li data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#cardCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#cardCarousel" data-bs-slide-to="2"></li>
+        </ol>
+
+        <div id="review-title" class="container spacement">
+            <img src="../../../assets/review-title.svg" class="img-fluid" alt="">
+        </div>
+
+
+
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="cards container">
+
+                    <div class="card-content  col-lg-8">
+                        <div class="card-text">
+                            <div class="card-header">
+                                <div>
+                                    <h4>Ricardo Amaral</h4>
+                                    <h5>Advogado</h5>
+                                </div>
+
+                                <img src="../../../assets/review-tag.png" class="pb-3" alt="">
+                            </div>
+                            <p>
+                                “Existem muitas variações de passagens de
+                                Lorem Ipsum disponível, mas a maioria tem
+                                sofreu alteração de alguma forma injetada
+                                humor ou randomizado”
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="../../../assets/client1.svg" class="img-fluid review-img" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item" *ngFor="let card of cards">
+                <div class="cards container">
+                    <div class="card-content  col-lg-8">
+                        <div class="card-text">
+                            <div class="card-header">
+                                <div>
+                                    <h4>{{ card.name }}</h4>
+                                    <h5>{{ card.ocupation }}</h5>
+                                </div>
+                                <img src="../../../assets/review-tag.png" class="pb-3" alt="">
+                            </div>
+                            <p>
+                                {{ card.review }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="{{ card.imgSrc }}" class="img-fluid review-img" style="width: 100%;" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Carousel Controls -->
+        <a class="carousel-control-prev" href="#cardCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#cardCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+
+
+</section>
