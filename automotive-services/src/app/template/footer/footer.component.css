@@ -26,8 +26,10 @@ hr {
   justify-content: center;
 }
 
-.d-flex img {
-  margin: 0px 13px 6px 0px;
+.d-flex i {
+  margin: -10px 20px 24px 0px;
+  font-size: 4em;
+  color: var(--primary);
 }
 
 #footer-main-content {
@@ -39,6 +41,7 @@ hr {
   .site-footer [class^=col-] {
     margin-bottom: 30px
   }
+
   #footer-main-content {
     flex-direction: column;
   }

@@ -1,6 +1,7 @@
 #reviews {
     padding-bottom: 9em;
 }
+
 #header-review {
     display: flex;
     justify-content: space-around;
@@ -63,10 +64,22 @@ p {
     justify-content: flex-start;
 }
 
-#review-btns {
+.review-btn {
     display: flex;
+    justify-content: flex-end;
+    padding-bottom: 1em;
 }
 
+@media (max-width: 580px) {
+    .cards {
+        width: 95%;
+    }
+    .review-btn {
+        display: flex;
+        justify-content: center;
+    }
+    
+}
 
 @media (max-width: 992px) {
     #header-review {

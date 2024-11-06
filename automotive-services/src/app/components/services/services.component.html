@@ -16,9 +16,9 @@
 
   <div id="cards">
 
-    <ng-container class=" col-xxl-8 container" *ngFor="let card of cards">
+    <ng-container class="col-xxl-8 container" *ngFor="let card of cards">
 
-      <div class="pb-5 container">
+      <div style="padding-bottom: 3em;" class="container">
         <div class="service-card  col-lg-12 col-md-12 col-sm-12 mb-4" data-aos="fade-up" data-aos-duration="1200">
           <div>
             <img [src]="card.image" class=" ak-bg" alt="Card Image" />
@@ -27,7 +27,7 @@
           <div class="">
             <h3>{{ card.title }}</h3>
             <p>{{ card.description }}</p>
-            <button class="view-more-btn" (click)="wppMessageOptions(card.title)">Ver mais</button>
+            <a class="view-more-btn" (click)="wppMessageOptions(card.title)" href="">Consultar</a>
 
           </div>
         </div>

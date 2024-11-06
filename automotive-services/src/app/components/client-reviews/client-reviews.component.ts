@@ -11,14 +11,14 @@ export class ClientReviewsComponent implements OnInit {
     {
       name: 'João Silva',
       ocupation: 'Consultor',
-      review: 'O Lorem Ipsum tem muitas variações, porém, algumas versões estão modificadas com passagens humorísticas ou palavras randomizadas.',
+      review: '"Ótimo atendimento e o carro ficou impecável! A equipe é muito cuidadosa e atenta aos detalhes. Recomendo demais!"',
       imgSrc: '../../../assets/client2.svg',
     },
     {
       name: 'Maria Oliveira',
       ocupation: 'Designer',
-      review: 'O texto Lorem Ipsum foi alterado ao longo dos anos, e algumas de suas passagens contêm injeções de humor ou palavras aleatórias.',
-      imgSrc: '../../../assets/client1.svg',
+      review: '"Melhor lugar para cuidar do carro! Trabalho de qualidade e agilidade. Superou minhas expectativas!"',
+      imgSrc: '../../../assets/review.PNG',
     }
   ];
   constructor() { }
