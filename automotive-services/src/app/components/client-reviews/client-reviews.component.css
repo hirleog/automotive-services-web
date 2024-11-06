@@ -1,7 +1,10 @@
+#reviews {
+    padding-bottom: 9em;
+}
 #header-review {
     display: flex;
     justify-content: space-around;
-    padding: 100px 0px 100px 0px;
+    padding: 100px 0px 160px 0px;
 }
 
 .details h1,
@@ -18,7 +21,7 @@ p {
     line-height: normal;
 }
 
-h1 {
+.details h1 {
     line-height: 1.2em;
     font-weight: 700;
     color: transparent;

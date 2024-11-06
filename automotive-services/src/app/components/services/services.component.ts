@@ -35,4 +35,29 @@ export class ServicesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public wppMessageOptions(option: any) {
+
+    const phoneNumber: string = '5511973752898'
+
+    switch (option) {
+      case 'Vitrificação de Pintura':
+        window.open(
+          `https://wa.me/${phoneNumber}?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20Vitrifica%C3%A7%C3%A3o%20de%20Pintura.%20Poderiam%20me%20informar%20sobre%20os%20benef%C3%ADcios%2C%20durabilidade%20e%20como%20%C3%A9%20realizado%20o%20processo%3F%20Obrigado!`, "_blank"
+        );
+        break;
+      case 'Polimento Automotivo':
+        window.open(
+          `https://wa.me/${phoneNumber}?text=Oi!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Polimento%20Automotivo.%20Poderiam%20explicar%20como%20ele%20%C3%A9%20feito%20e%20quais%20melhorias%20traz%20para%20a%20pintura%20do%20carro%3F%20Fico%20no%20aguardo.%20Obrigado!`, "_blank"
+        );
+        break;
+      case 'Impermeabilização de Estofados':
+        window.open(
+          `https://wa.me/${phoneNumber}?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Impermeabiliza%C3%A7%C3%A3o%20de%20Estofados.%20Qual%20%C3%A9%20o%20processo%20e%20quais%20s%C3%A3o%20os%20benef%C3%ADcios%20para%20a%20conserva%C3%A7%C3%A3o%20dos%20bancos%3F%20Agrade%C3%A7o%20desde%20j%C3%A1!`, "_blank"
+        );
+        break;
+      default:
+        break;
+    }
+  }
+
 }
