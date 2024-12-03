@@ -9,7 +9,9 @@ export class NavComponent implements OnInit {
 
   public openClose: boolean = false;
   scrolled = false;
-
+  previousScrollPosition = window.pageYOffset;
+  navbarVisible = true;
+  lastScrollTop = 0;
 
   constructor() { }
 
@@ -23,13 +25,20 @@ export class NavComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const scrollPosition = window.scrollY;
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (scrollPosition > 50) {
+    if (currentScroll > this.lastScrollTop) {
+      // Rolando para baixo: esconde o navbar
       this.scrolled = true;
     } else {
+      // Rolando para cima: mostra o navbar
       this.scrolled = false;
     }
-  }
 
+    this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  }
 }
+
+
+
+

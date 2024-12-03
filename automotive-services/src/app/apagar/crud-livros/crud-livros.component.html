@@ -1,0 +1,15 @@
+<p>crud-livros works!</p>
+
+<button type="button" (click)="getBooks()" class="btn btn-primary btn-lg ui-button mr-5">
+    get books
+</button>
+<button type="button" (click)="createBook()" class="btn btn-primary btn-lg ui-button mr-5">
+    post books
+</button>
+
+<br><br>
+<div>
+    <pre style="color: white;">
+        {{ books | json }}
+    </pre>
+</div>

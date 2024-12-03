@@ -1,3 +1,7 @@
+#about {
+  padding-bottom: 6em;
+}
+
 .about-content {
   display: flex;
 }
@@ -18,25 +22,34 @@
   width: 100%;
 }
 
-#ui-card i {
-  color: white;
-  background-color: var(--primary);
-  font-size: 30px;
-  left: 50%;
-  top: 50%;
-  background-color: #ff3d24b3;
-  border-radius: 100%;
+#ui-card:hover {
 
+  /* background-color: var(--light); */
+  /* color: black; */
+  transform: translateY(-8px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  /* border: 2px solid var(--light); */
 }
 
-/* 
- */
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.card-ajust {
+  display: flex;
+  justify-content: center;
+}
+
 
 @media (max-width: 998px) {
   .about-content {
     flex-direction: column;
-  }
-  .left-content {
-    /* padding-right: 60px; */
   }
 }

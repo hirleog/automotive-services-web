@@ -1,7 +1,11 @@
+#reviews {
+    padding-bottom: 9em;
+}
+
 #header-review {
     display: flex;
     justify-content: space-around;
-    padding: 100px 0px 100px 0px;
+    padding: 100px 0px 160px 0px;
 }
 
 .details h1,
@@ -18,7 +22,7 @@ p {
     line-height: normal;
 }
 
-h1 {
+.details h1 {
     line-height: 1.2em;
     font-weight: 700;
     color: transparent;
@@ -60,21 +64,43 @@ p {
     justify-content: flex-start;
 }
 
-#review-btns {
+.review-btn {
     display: flex;
+    justify-content: flex-end;
+    padding-bottom: 1em;
+}
+.fa-quote-left {
+    transform: scaleX(-1);
+    transform: rotate(180deg);
+    font-size: 8em;
+    color: var(--primary);
+
 }
 
+@media (max-width: 580px) {
+    .cards {
+        width: 95%;
+    }
+    .review-btn {
+        display: flex;
+        justify-content: center;
+    }
+    
+}
 
 @media (max-width: 992px) {
     #header-review {
         flex-direction: column;
         align-items: center;
     }
+    img {
+        display: none;
+    }
 }
 
 @media (max-width: 1200px) {
     .review-img {
-        display: none;
+        /* display: none; */
         background-color: red;
     }
 }

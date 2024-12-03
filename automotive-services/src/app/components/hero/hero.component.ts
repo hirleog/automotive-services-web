@@ -21,7 +21,7 @@ export class HeroComponent implements OnInit {
       setTimeout(() => {
         banner.classList.add('fade-in');
         bannerText.classList.add('fade-in');
-      }, 100); // Um pequeno atraso antes de aplicar o fade-in
+      }, 1); // Um pequeno atraso antes de aplicar o fade-in
     }
   }
 
