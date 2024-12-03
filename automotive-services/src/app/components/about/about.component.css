@@ -31,26 +31,25 @@
   /* border: 2px solid var(--light); */
 }
 
-#ui-card i {
-  color: white;
+.icon-circle {
+  width: 50px;
+  height: 50px;
   background-color: var(--primary);
-  font-size: 30px;
-  left: 50%;
-  top: 50%;
-  background-color: #ff3d24b3;
-  border-radius: 100%;
-
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.card-ajust {
+  display: flex;
+  justify-content: center;
 }
 
-/* 
- */
 
 @media (max-width: 998px) {
   .about-content {
     flex-direction: column;
-  }
-
-  .left-content {
-    /* padding-right: 60px; */
   }
 }

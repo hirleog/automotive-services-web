@@ -69,6 +69,13 @@ p {
     justify-content: flex-end;
     padding-bottom: 1em;
 }
+.fa-quote-left {
+    transform: scaleX(-1);
+    transform: rotate(180deg);
+    font-size: 8em;
+    color: var(--primary);
+
+}
 
 @media (max-width: 580px) {
     .cards {
@@ -86,11 +93,14 @@ p {
         flex-direction: column;
         align-items: center;
     }
+    img {
+        display: none;
+    }
 }
 
 @media (max-width: 1200px) {
     .review-img {
-        display: none;
+        /* display: none; */
         background-color: red;
     }
 }

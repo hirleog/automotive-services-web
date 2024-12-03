@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
-/* Estiliza a barra de rolagem */
 ::-webkit-scrollbar {
   width: 12px;
   /* largura da barra vertical */
@@ -13,12 +12,16 @@
 ::-webkit-scrollbar-track {
   background-color: #f1f1f1;
   /* cor do fundo */
+  /* border-radius: 10px; */
+  /* bordas arredondadas */
 }
 
 /* Estiliza o polegar da barra de rolagem */
 ::-webkit-scrollbar-thumb {
   background-color: var(--primary);
   /* cor do polegar */
+  border-radius: 10px;
+  /* bordas arredondadas */
 }
 
 /* Estiliza o polegar ao passar o mouse */
@@ -216,7 +219,10 @@ p {
 }
 
 :root {
-  --primary: #ff3d24;
+  /* --primary: #ff3d24; */
+  /* --primary: #ffc739; */
+  --primary: rgb(255, 196, 0);
+  /* Cor sólida */
   --primary-dark: #ad2c1b;
 
   --secondary: #1f1f1f;

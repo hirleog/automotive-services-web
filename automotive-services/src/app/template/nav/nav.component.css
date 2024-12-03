@@ -20,31 +20,29 @@ html body {
 }
 
 .navbar-expand-lg {
+  top: 0!important;
+  transition: top 0.6s ease-in-out!important;
+  z-index: 999!important;
+
   width: 100%;
   display: flex;
   justify-content: space-around;
 
   position: fixed;
-  z-index: 10;
-
   background-color: #00000013;
-  /* Cor azul com transparência */
   backdrop-filter: blur(10px);
-  /* Aplica desfoque de fundo */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  /* Linha sutil no fundo */
   transition: background-color 0.3s ease-in-out;
-  /* Efeito suave ao rolar */
+}
+nav.hidden {
+  top: -100%!important; /* Move o navbar para cima, ocultando-o */
 }
 
-/* .navbar-expand-lg.scrolled {
-  background-color: #00000013;
-  transition: background-color 0.3s ease-in-out;
-} */
+/* Transição suave para o efeito de ocultação */
 
 
 .navbar-collapse {
-  flex-grow: 0!important;
+  flex-grow: 0 !important;
 }
 
 /* FIM DO NAVBAR */

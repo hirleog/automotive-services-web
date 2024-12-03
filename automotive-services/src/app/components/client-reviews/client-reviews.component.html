@@ -18,7 +18,7 @@
 
     <div id="spacement">
 
-        <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="cardCarousel" class="carousel slide"  data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
             <!-- Indicators (optional) -->
             <ol class="carousel-indicators">
                 <li data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active"></li>
@@ -39,16 +39,6 @@
             <!-- Carousel Items -->
             <div class="carousel-inner container" data-aos="fade-up" data-aos-duration="2000">
 
-
-                <!-- Carousel Controls -->
-                <!-- <a class="carousel-control-prev" href="#cardCarousel" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </a>
-                <a class="carousel-control-next" href="#cardCarousel" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </a> -->
                 <div class="review-btn">
                     <a class="btn-review btn-primary btn-lg ui-button" href="#cardCarousel" role="button"
                         data-bs-slide="prev" style="margin-right: 12px;">ANTERIOR
@@ -68,8 +58,6 @@
                                         <h4>Ricardo Amaral</h4>
                                         <h5>Advogado</h5>
                                     </div>
-
-                                    <img src="../../../assets/review-tag.png" class="pb-3" alt="">
                                 </div>
                                 <p>
                                     "Equipe atenciosa e serviço impecável. Meu carro nunca esteve tão bonito. Indico
@@ -92,7 +80,9 @@
                                         <h4>{{ card.name }}</h4>
                                         <h5>{{ card.ocupation }}</h5>
                                     </div>
-                                    <img src="../../../assets/review-tag.png" class="pb-3" alt="">
+                                    <div class="pb-3">
+                                        <i class="fa fa-quote-left"></i>
+                                    </div>
                                 </div>
                                 <p>
                                     {{ card.review }}
