@@ -97,8 +97,8 @@ p {
     }
 
     #img-circle img {
-        width: 110px !important;
-        height: 110px !important;
+        width: 90px !important;
+        height: 90px !important;
     }
 }
 
@@ -120,6 +120,8 @@ p {
         display: flex;
         justify-content: space-between;
         padding-bottom: 1em;
+        padding-top: 50px;
+        
     }
 
     .hide-img {
@@ -130,6 +132,7 @@ p {
         display: block;
         border-radius: 50%;
         overflow: hidden;
+        margin-bottom: 3em;
     }
 }
 

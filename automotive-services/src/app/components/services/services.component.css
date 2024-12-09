@@ -3,6 +3,8 @@
   gap: 30px;
   padding-right: 0px;
   padding-left: 0px;
+  padding: 1em;
+
 }
 
 .service-card {
@@ -105,7 +107,6 @@
 
   .card-spacement {
     padding-bottom: 3em;
-    padding: 2em;
   }
 
   .service-card img {
