@@ -1,5 +1,6 @@
 #about {
-  padding-bottom: 6em;
+  padding-top: 6em;
+  padding-bottom: 0em;
 }
 
 .about-content {
@@ -10,26 +11,6 @@
   display: flex;
 }
 
-.cards img {
-  width: 80%;
-}
-
-#ui-card {
-  text-align: center;
-  color: white;
-  padding: 45px 35px;
-  background-color: #000000;
-  width: 100%;
-}
-
-#ui-card:hover {
-
-  /* background-color: var(--light); */
-  /* color: black; */
-  transform: translateY(-8px);
-  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-  /* border: 2px solid var(--light); */
-}
 
 .icon-circle {
   width: 50px;
@@ -42,6 +23,7 @@
   align-items: center;
   font-size: 24px;
 }
+
 .card-ajust {
   display: flex;
   justify-content: center;

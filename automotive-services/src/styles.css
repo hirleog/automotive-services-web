@@ -222,6 +222,7 @@ p {
   /* --primary: #ff3d24; */
   /* --primary: #ffc739; */
   --primary: rgb(255, 196, 0);
+  --primary-transparent: rgba(255, 196, 0, 0.397);
   /* Cor sólida */
   --primary-dark: #ad2c1b;
 

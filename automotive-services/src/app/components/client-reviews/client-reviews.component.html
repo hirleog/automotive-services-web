@@ -18,7 +18,8 @@
 
     <div id="spacement">
 
-        <div id="cardCarousel" class="carousel slide"  data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
+        <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"
+            data-bs-pause="false">
             <!-- Indicators (optional) -->
             <ol class="carousel-indicators">
                 <li data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active"></li>
@@ -48,15 +49,22 @@
                     </a>
                 </div>
 
+
+                 <div class="pb-3 quote-icon">
+                    <i class="fa fa-quote-left"></i>
+                </div>
                 <div class="carousel-item active">
                     <div class="cards container">
-
                         <div class="card-content  col-lg-8">
                             <div class="card-text">
                                 <div class="card-header">
                                     <div>
                                         <h4>Ricardo Amaral</h4>
                                         <h5>Advogado</h5>
+                                    </div>
+                                    <div id="img-circle">
+                                        <img src="../../../assets/client2.svg" style="width: 130px; height: 130px"
+                                            class="review-img" alt="">
                                     </div>
                                 </div>
                                 <p>
@@ -65,13 +73,39 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <img src="../../../assets/client1.svg" class="img-fluid review-img" alt="">
+                        <div class="hide-img ">
+                            <img src="../../../assets/client2.svg" class="img-fluid review-img" alt="">
                         </div>
                     </div>
                 </div>
 
+
                 <div class="carousel-item" *ngFor="let card of cards">
+                    <div class="cards container">
+                        <div class="card-content  col-lg-8">
+                            <div class="card-text">
+                                <div class="card-header">
+                                    <div>
+                                        <h4 style="padding-top: 1em;">{{ card.name }}</h4>
+                                        <h5>{{ card.ocupation }}</h5>
+                                    </div>
+                                    <div id="img-circle">
+                                        <img src="{{ card.imgSrc }}" style="width: 130px; height: 130px"
+                                            class="review-img" alt="">
+                                    </div>
+                                </div>
+                                <p>
+                                    {{ card.review }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="hide-img ">
+                            <img src="{{ card.imgSrc }}" class="img-fluid review-img" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="carousel-item" *ngFor="let card of cards">
                     <div class="cards container">
                         <div class="card-content  col-lg-8">
                             <div class="card-text">
@@ -80,8 +114,9 @@
                                         <h4>{{ card.name }}</h4>
                                         <h5>{{ card.ocupation }}</h5>
                                     </div>
-                                    <div class="pb-3">
-                                        <i class="fa fa-quote-left"></i>
+                                     <div id="img-circle">
+                                        <img src="../../../assets/client1.svg" style="width: 130px; height: 130px"
+                                            class="review-img" alt="">
                                     </div>
                                 </div>
                                 <p>
@@ -89,11 +124,11 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="hide-imgcol-lg-4">
                             <img src="{{ card.imgSrc }}" class="img-fluid review-img" style="width: 100%;" alt="">
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </div>
