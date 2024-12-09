@@ -1,0 +1,44 @@
+.cards img {
+    width: 80%;
+}
+
+#ui-card {
+    text-align: center;
+    color: white;
+    padding: 45px 35px;
+    background-color: #000000;
+    width: 100%;
+}
+
+#ui-card:hover {
+
+    /* background-color: var(--light); */
+    /* color: black; */
+    transform: translateY(-8px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    /* border: 2px solid var(--light); */
+}
+
+.card-ajust {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+
+@media (max-width: 998px) {
+    .about-content {
+        flex-direction: column;
+    }
+}

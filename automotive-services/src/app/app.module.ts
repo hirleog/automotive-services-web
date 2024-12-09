@@ -12,6 +12,7 @@ import { ClientReviewsComponent } from './components/client-reviews/client-revie
 import { ServicesComponent } from './components/services/services.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { NavComponent } from './template/nav/nav.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NavComponent } from './template/nav/nav.component';
     FooterComponent,
     ClientReviewsComponent,
     CrudLivrosComponent,
+    CardsComponent,
   ],
   imports: [
     BrowserModule,

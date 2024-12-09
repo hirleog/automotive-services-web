@@ -32,8 +32,26 @@
   background-position: center;
 }
 
-.sub-banner {
+#sub-banner {
   width: 100%;
+  /* position: absolute;
+  z-index: -1;
+
+  background-color: rgba(4, 6, 7, 0.5); */
+}
+
+
+
+
+#sub-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
 .floating-card {
@@ -64,9 +82,11 @@
 .floating-card:hover::after {
   opacity: 1;
 }
+.card-spacement {
+  padding-bottom: 3em;
+}
 
-
-@media (min-width: 768px) and (max-width: 1400px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   #services {
     flex-direction: column;
   }
@@ -81,6 +101,11 @@
     flex-direction: column;
     background-image: linear-gradient(179deg, rgb(4, 6, 7) 0.34%, rgba(4, 6, 7, 0) 91.06%);
     align-items: start;
+  }
+
+  .card-spacement {
+    padding-bottom: 3em;
+    padding: 2em;
   }
 
   .service-card img {
