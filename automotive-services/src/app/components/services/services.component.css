@@ -1,9 +1,9 @@
 #services {
-  display: flex;
+  /* display: flex;
   gap: 30px;
   padding-right: 0px;
   padding-left: 0px;
-  padding: 1em;
+  padding: 1em; */
 
 }
 
@@ -56,7 +56,7 @@
   z-index: 0;
 }
 
-.floating-card {
+/* .floating-card {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
@@ -83,10 +83,86 @@
 
 .floating-card:hover::after {
   opacity: 1;
-}
+} */
 .card-spacement {
   padding-bottom: 3em;
 }
+
+
+/* Container da Grid */
+.card-spacement {
+  padding: 10px;
+}
+
+/* Card container */
+.about_practice_icontext {
+  background-color: #00000048;
+  /* border: 1px solid #ddd; */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  /* Altura fixa para garantir que todos os cards tenham o mesmo tamanho */
+  overflow: hidden;
+  transition: all 0.3s ease;
+  /* Transição suave para todos os efeitos */
+}
+
+/* Efeito ao passar o mouse no card */
+.about_practice_icontext:hover {
+  opacity: 0.9;
+  /* Torna o card ligeiramente transparente */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  /* Aumenta a sombra para dar um efeito de profundidade */
+  transform: scale(1.05);
+  /* Leve aumento do tamanho para o efeito de zoom */
+}
+
+/* Imagem do Card */
+.card-image img {
+  width: 100%;
+  height: 200px;
+  /* Altura fixa para a imagem */
+  object-fit: cover;
+  /* Faz com que a imagem cubra a área sem distorcer */
+  transition: transform 0.3s ease;
+  /* Transição suave ao passar o mouse na imagem */
+}
+
+/* Efeito na imagem ao passar o mouse */
+.about_practice_icontext:hover .card-image img {
+  transform: scale(1.05);
+  /* Aumenta a imagem ligeiramente ao passar o mouse */
+}
+
+
+/* Conteúdo do Card (Título e Descrição) */
+.card-content {
+  flex-grow: 1;
+  /* Faz com que o conteúdo ocupe o restante do espaço */
+  padding: 15px;
+}
+
+.card-content h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: var(--light);
+}
+
+.card-content p {
+  font-size: 1em;
+  color: var(--light);
+  margin-bottom: 15px;
+  overflow: hidden;
+  /* Impede que o texto ultrapasse os limites do card */
+  text-overflow: ellipsis;
+  /* Adiciona "..." quando o texto for longo */
+  white-space: nowrap;
+  /* Impede o texto de quebrar linhas */
+}
+
+
 
 @media (min-width: 768px) and (max-width: 1200px) {
   #services {
@@ -114,5 +190,21 @@
     width: 200%;
     object-fit: cover;
     max-height: 325px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  #services {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #services {
+    flex-direction: column;
+  }
+
+  .card-spacement {
+    padding-bottom: 3em;
   }
 }

@@ -1,6 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
+:root {
+  /* --primary: #ff3d24; */
+  /* --primary: #ffc739; */
+  --primary: rgb(255, 196, 0);
+  --primary-transparent: rgba(255, 196, 0, 0.397);
+  /* Cor sólida */
+  --primary-dark: #ad2c1b;
+
+  --secondary: #1f1f1f;
+  --secondary-transparent: #00000079;
+  --secondary-light: rgba(24, 24, 24, 0.986);
+  --light: white;
+  --medium: #cacacabd;
+  --dark: #a2a2a2;
+}
+
 ::-webkit-scrollbar {
   width: 12px;
   /* largura da barra vertical */
@@ -216,22 +232,6 @@ p {
 
 .spacement {
   padding-bottom: 3em;
-}
-
-:root {
-  /* --primary: #ff3d24; */
-  /* --primary: #ffc739; */
-  --primary: rgb(255, 196, 0);
-  --primary-transparent: rgba(255, 196, 0, 0.397);
-  /* Cor sólida */
-  --primary-dark: #ad2c1b;
-
-  --secondary: #1f1f1f;
-  --secondary-transparent: #00000079;
-  --secondary-light: rgba(24, 24, 24, 0.986);
-  --light: white;
-  --medium: #cacacabd;
-  --dark: #a2a2a2;
 }
 
 @media (max-width:767px) {

@@ -1,0 +1,19 @@
+#hero-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.ui-button-wpp {
+    background-color: rgb(16, 206, 85);
+    border-color: rgb(16, 206, 85);
+}
+
+.ui-button-wpp:hover {
+    background-color: var(--light);
+    border-color: var(--light);
+    color: var(--light);
+}
+
+a {
+    color: var(--light);
+}

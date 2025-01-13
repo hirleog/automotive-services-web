@@ -1,7 +1,6 @@
-<section id="home" class="spacement">
+<!-- <section id="home" class="spacement">
   <div id="banner" class="video-background">
 
-    <!-- !isVideoPlaying -->
     <img src="../../../assets/porche-banner.webp" alt="Banner Fallback" />
 
     <div id="banner-text" class="content container">
@@ -22,5 +21,61 @@
         </a>
       </div>
     </div>
+  </div>
+</section> -->
+
+
+
+<section id="home" class="spacement">
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div id="banner" class="video-background bg-overlay bg-overlay-dark bg-section">
+
+          <img src="../../../assets/porche-banner.webp" alt="Banner Fallback" />
+
+          <div id="banner-text" class="content container">
+            <h1>
+              <span class="highlight">Estética</span><br />
+              Automotiva de <span class="highlight">Alto</span> Padrão
+            </h1>
+            <p class="pb-3" style="font-size: larger">
+              serviços de reparo e automóveis para garantir que seu veículo tenha o
+              melhor desempenho.<br />Nosso equipe qualificada de técnicos
+              certificados.
+            </p>
+            <app-wpp-btn></app-wpp-btn>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div id="banner" class="video-background bg-overlay bg-overlay-dark bg-section">
+
+          <img src="../../../assets/background2.webp" alt="Banner Fallback" />
+
+          <div id="banner-text" class="content2 container" style="z-index: 1;">
+            <h1 style="color: var(--secondary-detail)">
+              Qualidade & Confiança
+            </h1>
+            <p class="pb-3" style="font-size: larger">
+              Excelência no atendimento e defesa dos direitos dos trabalhadores"
+            </p>
+            <app-wpp-btn></app-wpp-btn>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 </section>

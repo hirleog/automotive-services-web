@@ -16,7 +16,7 @@
     </div>
   </div>
 
-  <div id="cards" class="spacement">
+  <!-- <div id="cards" class="spacement">
 
     <ng-container class="col-xxl-8 container" *ngFor="let card of cards">
 
@@ -36,6 +36,31 @@
       </div>
 
     </ng-container>
+  </div> -->
+
+
+  <div class="container mt-4">
+    <div class="row">
+      <div *ngFor="let card of cards" class="col-lg-4 col-md-6 col-sm-12 card-spacement">
+        <div class="about_practice_icontext floating-card" (click)="wppMessageOptions(card.title)" data-aos="fade-up"
+          data-aos-duration="600">
+
+          <!-- Imagem do Card -->
+          <div class="card-image">
+            <img [src]="card.image">
+          </div>
+
+          <!-- Conteúdo do Card (Título e Descrição) -->
+          <div class="card-content">
+            <h4>{{ card.title }}</h4>
+            <p>{{ card.description }}</p>
+            <a class="view-more-btn" (click)="wppMessageOptions(card.title)" href="">Consultar</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
   </div>
 
 </section>
