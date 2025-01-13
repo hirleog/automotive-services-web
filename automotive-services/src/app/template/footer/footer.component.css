@@ -45,6 +45,11 @@ hr {
   #footer-main-content {
     flex-direction: column;
   }
+
+  .maps {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media (max-width:767px) {
@@ -56,12 +61,6 @@ hr {
   .site-footer .social-icons {
     text-align: center
   }
-}
-
-@media (min-width:473px) {
-  /* h1 {
-    font-size: 22px;
-  } */
 }
 
 
