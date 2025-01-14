@@ -1,136 +1,97 @@
 <section id="reviews">
-    <div class="container">
-        <div id="header-review">
-            <div class="details" data-aos="fade-up" data-aos-duration="350">
-                <h1>10+</h1>
-                <p>ANOS DE SERVIÇO</p>
+
+    <div id="content-div" class="content container" data-aos="fade-right" data-aos-duration="1500">
+        <h1>
+            Veja o que <span class="highlight">nossos</span><br />
+            <span class="highlight">clientes</span> estão dizendo
+        </h1>
+    </div>
+
+
+
+    <div id="feedback-carousel" class="container py-5 desktop-tablet">
+        <div id="carouselFeedbacks" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item" *ngFor="let group of feedbackGroups; let i = index" [class.active]="i === 0">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let feedback of group">
+                            <div class="card-review p-3">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <!-- Foto circular -->
+                                    <div class="feedback-header d-flex align-items-center">
+                                        <div class="feedback-photo">
+                                            <img [src]="feedback.photoUrl" alt="Foto de {{ feedback.client }}"
+                                                class="img-fluid">
+                                        </div>
+                                        <h5 class="card-title ms-3">{{ feedback.client }}</h5>
+                                    </div>
+
+                                    <!-- Comentário -->
+                                    <p class="card-text mt-3">{{ feedback.text }}</p>
+
+                                    <!-- Estrelas -->
+                                    <div class="stars mt-3">
+                                        <ng-container *ngFor="let star of getStars(feedback.rating)">
+                                            <i class="fas fa-star text-warning"></i>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="details" data-aos="fade-up" data-aos-duration="650">
-                <h1>10+</h1>
-                <p>CLIENTES FELIZES</p>
-            </div>
-            <div class="details" data-aos="fade-up" data-aos-duration="950">
-                <h1>10+</h1>
-                <p>SATISFAÇÃO DO CLIENTE</p>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFeedbacks"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselFeedbacks"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
         </div>
     </div>
 
-    <div id="spacement">
 
-        <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"
-            data-bs-pause="false">
-            <!-- Indicators (optional) -->
-            <ol class="carousel-indicators">
-                <li data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active"></li>
-                <li data-bs-target="#cardCarousel" data-bs-slide-to="1"></li>
-                <li data-bs-target="#cardCarousel" data-bs-slide-to="2"></li>
-            </ol>
+    <!-- CARROSSEL PARA MOBILE -->
 
-
-            <div id="content-div" class="content container spacement" data-aos="fade-right" data-aos-duration="1500">
-                <h1>
-                    Veja o que <span class="highlight">nossos</span><br />
-                    <span class="highlight">clientes</span> estão dizendo
-                </h1>
+    <div id="feedback-carousel" class="container py-5 mobile">
+        <div id="carouselFeedbacks2" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item" *ngFor="let feedback of feedbacks; let i = index" [class.active]="i === 0">
+                    <div class="card-review p-3">
+                        <div class="card-body">
+                            <!-- Foto do Cliente -->
+                            <div class="d-flex align-items-center mb-3">
+                                <img [src]="feedback.photoUrl" alt="Foto de {{ feedback.client }}"
+                                    class="rounded-circle" width="40" height="40">
+                                <h5 class="card-title ms-3">{{ feedback.client }}</h5>
+                            </div>
+                            <!-- Comentário -->
+                            <p class="card-text">{{ feedback.text }}</p>
+                            <!-- Estrelas de Avaliação -->
+                            <div class="stars">
+                                <ng-container *ngFor="let star of [].constructor(feedback.rating); let idx = index">
+                                    <i class="fa fa-star text-warning" [class.filled]="idx < feedback.rating"></i>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
-
-            <!-- Carousel Items -->
-            <div class="carousel-inner container" data-aos="fade-up" data-aos-duration="2000">
-
-                <div class="review-btn">
-                    <a class="btn-review btn-primary btn-lg ui-button" href="#cardCarousel" role="button"
-                        data-bs-slide="prev" style="margin-right: 12px;">ANTERIOR
-                    </a>
-                    <a class="btn-review btn-primary btn-lg ui-" href="#cardCarousel" role="button"
-                        data-bs-slide="next">PROXÍMO
-                    </a>
-                </div>
-
-
-                 <div class="pb-3 quote-icon">
-                    <i class="fa fa-quote-left"></i>
-                </div>
-                <div class="carousel-item active">
-                    <div class="cards container">
-                        <div class="card-content  col-lg-8">
-                            <div class="card-text">
-                                <div class="card-header">
-                                    <div>
-                                        <h4 style="padding-top: 1em;">Ricardo Amaral</h4>
-                                        <h5>Advogado</h5>
-                                    </div>
-                                    <div id="img-circle">
-                                        <img src="../../../assets/rick-review.webp" style="width: 130px; height: 130px"
-                                            class="review-img" alt="">
-                                    </div>
-                                </div>
-                                <p>
-                                    "Equipe atenciosa e serviço impecável. Meu carro nunca esteve tão bonito. Indico
-                                    para todos!"
-                                </p>
-                            </div>
-                        </div>
-                        <div class="hide-img ">
-                            <img src="../../../assets/rick-review.webp" class="img-fluid review-img" alt="">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="carousel-item" *ngFor="let card of cards">
-                    <div class="cards container">
-                        <div class="card-content  col-lg-8">
-                            <div class="card-text">
-                                <div class="card-header">
-                                    <div>
-                                        <h4 style="padding-top: 1em;">{{ card.name }}</h4>
-                                        <h5>{{ card.ocupation }}</h5>
-                                    </div>
-                                    <div id="img-circle">
-                                        <img src="{{ card.imgSrc }}" style="width: 130px; height: 130px"
-                                            class="review-img" alt="">
-                                    </div>
-                                </div>
-                                <p>
-                                    {{ card.review }}
-                                </p>
-                            </div>
-                        </div>
-                        <div class="hide-img ">
-                            <img src="{{ card.imgSrc }}" class="img-fluid review-img" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <div class="carousel-item" *ngFor="let card of cards">
-                    <div class="cards container">
-                        <div class="card-content  col-lg-8">
-                            <div class="card-text">
-                                <div class="card-header">
-                                    <div>
-                                        <h4>{{ card.name }}</h4>
-                                        <h5>{{ card.ocupation }}</h5>
-                                    </div>
-                                     <div id="img-circle">
-                                        <img src="../../../assets/client1.svg" style="width: 130px; height: 130px"
-                                            class="review-img" alt="">
-                                    </div>
-                                </div>
-                                <p>
-                                    {{ card.review }}
-                                </p>
-                            </div>
-                        </div>
-                        <div class="hide-imgcol-lg-4">
-                            <img src="{{ card.imgSrc }}" class="img-fluid review-img" style="width: 100%;" alt="">
-                        </div>
-                    </div>
-                </div> -->
-
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFeedbacks2"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselFeedbacks2"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
         </div>
     </div>
+
 </section>

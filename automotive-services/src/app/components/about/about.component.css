@@ -1,6 +1,9 @@
 #about {
   padding-top: 2em;
   padding-bottom: 0em;
+  /* background-color: var(--secondary-transparent); */
+  padding-bottom: 5em;
+  padding-top: 5em;
 }
 
 .about-content {
@@ -27,6 +30,27 @@
 .card-ajust {
   display: flex;
   justify-content: center;
+}
+
+
+.stroke-text h2{
+  line-height: 1.2em;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--light);
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  cursor: unset;
+  font-weight: bold;
+}
+.stroke-text h2:hover {
+  /* color: var(--primary); */
+  text-shadow: 
+  1px 1px 3px var(--primary), 
+  -1px -1px 3px var(--primary);
 }
 
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-client-reviews',
@@ -7,23 +7,81 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientReviewsComponent implements OnInit {
 
-  public cards = [
+  feedbacks = [
     {
-      name: 'João Silva',
-      ocupation: 'Consultor',
-      review: '"Ótimo atendimento e o carro ficou impecável! A equipe é muito cuidadosa e atenta aos detalhes. Recomendo demais!"',
-      imgSrc: '../../../assets/client2.svg',
+      text: 'O atendimento foi impecável! Superaram minhas expectativas com o serviço oferecido. Recomendo a todos!',
+      client: 'Cliente 1',
+      photoUrl: '../../../assets/rick-review.webp',  // URL da foto
+      rating: 5
     },
     {
-      name: 'Maria Oliveira',
-      ocupation: 'Designer',
-      review: '"Melhor lugar para cuidar do carro! Trabalho de qualidade e agilidade. Superou minhas expectativas!"',
-      imgSrc: '../../../assets/review.PNG',
-    }
+      text: 'Muito satisfeita com o trabalho realizado. A equipe foi profissional e cuidadosa, com resultados que superaram as minhas expectativas.',
+      client: 'Cliente 2',
+      photoUrl: '../../../assets/rick-review.webp',  // URL da foto
+      rating: 4
+    },
+    {
+      text: 'Excelente qualidade e ótimo atendimento. Me senti segura e bem atendida durante todo o processo. Voltarei com certeza!',
+      client: 'Cliente 3',
+      photoUrl: '../../../assets/rick-review.webp',  // URL da foto
+      rating: 5
+    },
+    {
+      text: 'O serviço é muito bom! A equipe tem grande experiência e prestou um atendimento excepcional do início ao fim. Muito obrigado!',
+      client: 'Cliente 4',
+      photoUrl: '../../../assets/rick-review.webp',  // URL da foto
+      rating: 4
+    },
+    {
+      text: 'Fiquei encantado com o resultado final. O cuidado com os detalhes e a dedicação da equipe fizeram toda a diferença. Recomendo de olhos fechados.',
+      client: 'Cliente 5',
+      photoUrl: '../../../assets/rick-review.webp',  // URL da foto
+      rating: 5
+    },
+    {
+      text: 'A experiência foi muito boa. A equipe foi cordial, prestativa e a qualidade do serviço foi excelente. Voltarei sempre que precisar.',
+      client: 'Cliente 6',
+      photoUrl: '../../../assets/rick-review.webp',  // URL da foto
+      rating: 4
+    },
   ];
+
+  feedbackGroups: any[][] = [];
+  groupSize = 3; // Padrão: 3 feedbacks por grupo
+
   constructor() { }
 
   ngOnInit(): void {
+    this.updateGroupSize();
+    this.createFeedbackGroups();
+  }
+
+
+  @HostListener('window:resize', [])
+  onResize() {
+    this.updateGroupSize();
+    this.createFeedbackGroups();
+  }
+
+  updateGroupSize(): void {
+    const width = window.innerWidth;
+
+    if (width < 992) {
+      this.groupSize = 2; // 2 feedbacks por grupo em telas médias (< 992px)
+    } else {
+      this.groupSize = 3; // 3 feedbacks por grupo em telas grandes (>= 992px)
+    }
+  }
+
+  createFeedbackGroups(): void {
+    this.feedbackGroups = []; // Limpa os grupos antigos
+    for (let i = 0; i < this.feedbacks.length; i += this.groupSize) {
+      this.feedbackGroups.push(this.feedbacks.slice(i, i + this.groupSize));
+    }
+  }
+  // Função para gerar as estrelas
+  getStars(rating: number) {
+    return new Array(rating).fill(0);  // Retorna um array de tamanho 'rating' para as estrelas
   }
 
 }

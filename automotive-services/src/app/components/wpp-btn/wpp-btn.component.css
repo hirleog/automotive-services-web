@@ -9,8 +9,8 @@
 }
 
 .ui-button-wpp:hover {
-    background-color: var(--light);
-    border-color: var(--light);
+    background-color: var(--primary);
+    border-color: var(--primary);
     color: var(--light);
 }
 

@@ -6,7 +6,7 @@
     text-align: center;
     color: white;
     padding: 45px 35px;
-    background-color: #000000;
+    background-color: var(--secondary-transparent);
     width: 100%;
 }
 

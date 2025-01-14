@@ -19,3 +19,7 @@
     border-radius: 50%;
     display: inline-block;
 }
+
+.btn-topo:hover {
+    background-color: var(--primary);
+}

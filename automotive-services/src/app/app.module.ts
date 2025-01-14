@@ -14,6 +14,8 @@ import { FooterComponent } from './template/footer/footer.component';
 import { NavComponent } from './template/nav/nav.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { WppBtnComponent } from './components/wpp-btn/wpp-btn.component';
+import { MidBannerComponent } from './components/mid-banner/mid-banner.component';
+import { QuestionsComponent } from './components/questions/questions.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { WppBtnComponent } from './components/wpp-btn/wpp-btn.component';
     ClientReviewsComponent,
     CrudLivrosComponent,
     CardsComponent,
-    WppBtnComponent
+    WppBtnComponent,
+    MidBannerComponent,
+    QuestionsComponent
   ],
   imports: [
     BrowserModule,

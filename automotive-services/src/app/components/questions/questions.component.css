@@ -1,0 +1,39 @@
+.accordion-button {
+    border: 2px solid transparent;
+    /* Padrão */
+    transition: border-color 0.3s ease;
+    /* Suaviza a transição */
+    /* outline: none; */
+    /* Remove a borda externa padrão */
+    /* box-shadow: none; */
+    /* Remove possíveis sombras extras */
+}
+
+/* Mudar a cor do botão quando está expandido */
+.accordion-button:not(.collapsed) {
+    background: var(--secondary-dark);
+    /* Cor de fundo azul (pode trocar por qualquer cor que preferir) */
+    border-color: var(--secondary-dark);
+    /* Cor da borda do botão expandido (pode trocar por qualquer cor) */
+    color: black;
+    /* Cor do texto quando expandido */
+}
+
+.accordion-button.collapsed {
+    background: var(--secondary-dark);
+    /* Cor de fundo azul (pode trocar por qualquer cor que preferir) */
+    border-color: var(--secondary-dark);
+    /* Cor da borda do botão expandido (pode trocar por qualquer cor) */
+    color: black;
+    /* Cor do texto quando expandido */
+}
+
+.accordion-button:focus {
+    border-color: var(--primary);
+    /* Cor ao receber foco (opcional) */
+    outline: none;
+
+    outline: none; /* Remove o outline de foco */
+    box-shadow: 0 0 0 0.25rem rgba(255, 196, 0, 0.137); /* Adiciona um efeito sutil de foco */
+}
+    /* Remove a borda padrão do navegador */
