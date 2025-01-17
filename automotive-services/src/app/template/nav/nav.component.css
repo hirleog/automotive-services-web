@@ -20,29 +20,50 @@ html body {
 }
 
 .navbar-expand-lg {
-  top: 0!important;
-  transition: top 0.6s ease-in-out!important;
-  z-index: 999!important;
-
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-
-  position: fixed;
+  z-index: 999 !important;
+  transition: top 0.6s ease-in-out !important;
   background-color: #00000013;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: background-color 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
 }
+
 nav.hidden {
-  top: -100%!important; /* Move o navbar para cima, ocultando-o */
+  top: -100% !important;
 }
 
-/* Transição suave para o efeito de ocultação */
+#big-screen {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  position: relative;
 
+  z-index: 999 !important;
+  transition: top 0.6s ease-in-out !important;
+  background-color: #00000013;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease-in-out;
+  position: fixed;
+}
 
 .navbar-collapse {
-  flex-grow: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  position: relative;
+  /* Garante controle sobre a posição dos elementos */
+}
+
+.big-screen-nav {
+  display: flex !important;
+
 }
 
 /* FIM DO NAVBAR */
@@ -66,19 +87,34 @@ nav.hidden {
 }
 
 #burger i {
-  display: none;
+  /* display: none;
   color: var(--primary);
-  margin: 15px 10px 0px 0px;
+  margin: 15px 10px 0px 0px; */
+  color: var(--primary);
+  font-size: 24px;
+  cursor: pointer;
+  width: 40px;
+  /* Define um tamanho fixo para alinhamento uniforme */
+  text-align: center;
+  /* Centraliza o conteúdo do ícone */
 }
 
-#burger i {
+/* #burger i, #logo, #cart {
   display: none;
+} */
+
+#logo {
+  width: 7em;
+  left: 50%;
+  /* Move o logo para o meio do container */
+  font-size: 18px;
+  font-weight: bold;
 }
 
 
 
 
-@media (max-width : 768px) {
+@media (max-width : 998px) {
   .side-bar {
     background: var(--secondary-light);
     position: fixed;
@@ -90,7 +126,7 @@ nav.hidden {
     opacity: 100%;
     transition: all 0.5s ease;
     z-index: 10;
-    margin-top: 113px;
+    margin-top: 89px;
   }
 
   #ajustes {
@@ -100,11 +136,6 @@ nav.hidden {
     margin: 0px 10px 0px 10px;
   }
 
-  #burger i {
-    display: block;
-    cursor: pointer;
-  }
-
   .nav-item a {
     display: flex;
     justify-content: center;
@@ -112,6 +143,14 @@ nav.hidden {
     visibility: visible;
   }
 
+  #logo {
+    position: absolute;
+    transform: translateX(-50%);
+    /* Garante que o logo esteja perfeitamente centralizado */
+  }
+  #big-screen {
+   display: none!important;
+  }
 
 }
 
@@ -155,20 +194,7 @@ nav.hidden {
 
   }
 
-  .navbar-expand-lg {
-    width: 100%;
-    /* display: flex; */
-    /* justify-content: space-around; */
-    /* background: #000;
-    background: var(--secondary); */
-    opacity: 95%;
 
-    position: fixed;
-    /* top: 0;
-    left: 0;
-    bottom: 0; */
-    z-index: 10;
-  }
 
 
   #ajustes {

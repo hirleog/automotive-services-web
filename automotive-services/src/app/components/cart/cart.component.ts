@@ -1,13 +1,13 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
-  selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css']
+  selector: 'app-cart',
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.css']
 })
-export class NavComponent implements OnInit {
+export class CartComponent implements OnInit {
 
   public openClose: boolean = false;
   scrolled = false;
@@ -51,9 +51,3 @@ export class NavComponent implements OnInit {
     this.subscription.unsubscribe();
   }
 }
-
-
-
-
-
-

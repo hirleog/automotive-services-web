@@ -147,7 +147,7 @@ p {
 
 
 
-.tag-a-effect {
+/* .tag-a-effect {
   font-family: 'Oxanium', sans-serif;
   color: var(--light);
   text-transform: uppercase;
@@ -158,7 +158,7 @@ p {
   margin-bottom: 6px;
   text-decoration: unset;
   font-weight: 500;
-}
+} */
 
 /* .tag-a-effect:hover {
   color: var(--light);

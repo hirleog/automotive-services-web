@@ -1,19 +1,65 @@
 <nav [ngClass]="{ 'hidden': scrolled }" data-aos="fade-down" class="navbar navbar-expand-lg navbar-light">
 
-  <div class="collapse navbar-collapse" data-aos="fade-down" data-aos-duration="1000" id="ajustes">
-    <div id="burger" style="display: flex; justify-content: flex-start; padding-top: -10px">
-      <i data-aos="fade-down" (click)="menu()" class="fa-solid fa-bars"></i>
-    </div>
+  <!-- MOBILE -->
+  <div class=" d-lg-none d-block" style="width: 100%;">
+    <div class="collapse navbar-collapse " data-aos="fade-down" id="ajustes">
+      <div id="burger">
+        <i data-aos="fade-down" (click)="menu()" class="fa-solid fa-bars"></i>
+      </div>
 
-    <div class="navbar-brand" style="display: flex">
-      <div class="container">
+      <div id="logo">
         <a class="tag-a-effect" href="#inicio">
-          <img src="../../../assets/molinari-logo.webp" class="container-fluid" alt="error" style="width: 7em" />
+          <img src="../../../assets/molinari-logo.webp" class="container-fluid" alt="error" />
         </a>
       </div>
+
+      <ng-container>
+        <app-cart id="cart"></app-cart>
+      </ng-container>
+    </div>
+  </div>
+  <!-- MOBILE -->
+
+
+</nav>
+
+
+<nav id="big-screen" class="d-none d-lg-block navbar-light navbar navbar-expand-lg">
+
+    <div id="logo">
+      <a class="tag-a-effect" href="#inicio">
+        <img src="../../../assets/molinari-logo.webp" class="container-fluid" alt="error" />
+      </a>
     </div>
 
-    <div id="fake"></div>
+    <div class=" ">
+      <ul class="big-screen-nav me-auto mb-lg-0 ">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#home">Página Inicial</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#about">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#services">Serviços</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#reviews">Clientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#contato">Contato</a>
+        </li>
+      </ul>
+    </div>
+
+    <ng-container>
+      <app-cart id="cart"></app-cart>
+    </ng-container>
+
+  <!-- <div id="logo">
+    <a class="tag-a-effect" href="#inicio">
+      <img src="../../../assets/molinari-logo.webp" class="container-fluid" alt="error" />
+    </a>
   </div>
 
   <div class="hide-menu" style="display: flex; justify-content: flex-start">
@@ -25,7 +71,6 @@
         <a class="nav-link active" aria-current="page" href="#about">Sobre</a>
       </li>
       <li class="nav-item">
-        <!-- <a class="nav-link active" aria-current="page" href="#services">Serviços</a> -->
         <a class="nav-link active" aria-current="page" href="#services">Serviços</a>
       </li>
       <li class="nav-item">
@@ -36,6 +81,11 @@
       </li>
     </ul>
   </div>
+
+  <ng-container>
+    <app-cart id="cart"></app-cart>
+  </ng-container> -->
+
 </nav>
 
 <div data-aos="fade-right" class="side-bar" *ngIf="openClose">

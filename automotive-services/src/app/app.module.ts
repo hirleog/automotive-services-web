@@ -16,6 +16,7 @@ import { CardsComponent } from './components/cards/cards.component';
 import { WppBtnComponent } from './components/wpp-btn/wpp-btn.component';
 import { MidBannerComponent } from './components/mid-banner/mid-banner.component';
 import { QuestionsComponent } from './components/questions/questions.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { QuestionsComponent } from './components/questions/questions.component';
     CardsComponent,
     WppBtnComponent,
     MidBannerComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

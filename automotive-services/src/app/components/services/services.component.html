@@ -16,33 +16,11 @@
     </div>
   </div>
 
-  <!-- <div id="cards" class="spacement">
-
-    <ng-container class="col-xxl-8 container" *ngFor="let card of cards">
-
-      <div class="container card-spacement">
-        <div class="service-card floating-card col-lg-12 col-md-12 col-sm-12 mb-4" data-aos="fade-up"
-          data-aos-duration="1200">
-          <div>
-            <img [src]="card.image" class=" ak-bg" alt="Card Image" />
-          </div>
-
-          <div style="padding: 1em;">
-            <h3>{{ card.title }}</h3>
-            <p>{{ card.description }}</p>
-            <a class="view-more-btn" (click)="wppMessageOptions(card.title)" href="">Consultar</a>
-          </div>
-        </div>
-      </div>
-
-    </ng-container>
-  </div> -->
-
-
   <div class="container mt-4">
     <div class="row">
       <div *ngFor="let card of cards" class="col-lg-4 col-md-6 col-sm-12 card-spacement">
-        <div class="about_practice_icontext floating-card" (click)="wppMessageOptions(card.title)" data-aos="fade-up"
+        <!-- <div class="about_practice_icontext floating-card" (click)="wppMessageOptions(card.title)" data-aos="fade-up" -->
+        <div class="about_practice_icontext floating-card" data-aos="fade-up"
           data-aos-duration="600">
 
           <!-- Imagem do Card -->
@@ -54,7 +32,16 @@
           <div class="card-content">
             <h4>{{ card.title }}</h4>
             <p>{{ card.description }}</p>
-            <a class="view-more-btn" (click)="wppMessageOptions(card.title)" href="">Consultar</a>
+
+            <div class="d-flex">
+
+              <div class="product">
+                <button id="cart-btn" (click)="addToCart()">Adicionar ao Carrinho</button>
+              </div>
+
+              
+              <a class="view-more-btn" (click)="wppMessageOptions(card.title)" href="">Consultar</a>
+            </div>
           </div>
 
         </div>
@@ -64,8 +51,3 @@
   </div>
 
 </section>
-
-
-<!-- <div id="sub-banner" data-aos="zoom-in">
-  <img class="img-fluid" src="../../../assets/background-about.webp" alt="">
-</div> -->
