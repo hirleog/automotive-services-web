@@ -22,14 +22,15 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {
     // Inscreve-se no Observable para escutar mudanças
-    this.subscription = this.cartService.itemCount$.subscribe(
-      (count) => (this.itemCount = count)
-    );
+    // this.subscription = this.cartService.itemCount$.subscribe(
+    //   (count) => (this.itemCount = count)
+    // );
   }
 
   public menu() {
     this.openClose = !this.openClose;
   }
+  
 
   // @HostListener('window:scroll', [])
   // onWindowScroll() {

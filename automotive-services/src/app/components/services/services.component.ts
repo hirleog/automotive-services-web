@@ -62,8 +62,9 @@ export class ServicesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public addToCart(): void {
-    this.cartService.addItem();
+  public addToCart(product: any): void {
+    
+    this.cartService.addItem(product);
   }
 
   public goToServices(): void { }

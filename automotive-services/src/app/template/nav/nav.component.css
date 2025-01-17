@@ -20,7 +20,7 @@ html body {
 }
 
 .navbar-expand-lg {
-  z-index: 999 !important;
+  z-index: 9 !important;
   transition: top 0.6s ease-in-out !important;
   background-color: #00000013;
   backdrop-filter: blur(10px);

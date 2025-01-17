@@ -98,20 +98,135 @@ nav.hidden {
     color: #000;
 }
 
+.cart-container {
+    /* max-width: 600px; */
+    margin: 2rem auto;
+    padding: 1rem;
+    /* background: #fff; */
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #dddddd26;
+    padding-bottom: 1rem;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-details h4 {
+    margin: 0 0 0.5rem;
+}
+
+.item-details p {
+    margin: 0.2rem 0;
+}
+
+.price {
+    font-weight: bold;
+    color: #007b5e;
+}
+
+.remove-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.remove-btn:hover {
+    background: #e60000;
+}
+
+.side-bar {
+    background: var(--secondary-light);
+    position: fixed;
+    top: 0;
+    /* left: 10em; */
+    left: 0em;
+    width: 100%;
+    height: 87em;
+    opacity: 100%;
+    transition: all 0.5s ease;
+    z-index: 10;
+    /* margin-top: 67px; */
+}
+
+.scrollable-container {
+    height: 52em;
+    /* overflow-y: auto; */
+    padding: 10px;
+
+    overflow-y: scroll; /* Permite rolar verticalmente */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+
+  .scrollable-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Edge */
+  }
+
+  .close-cart-button {
+    width: 40px; /* Largura do círculo */
+    height: 40px; /* Altura do círculo */
+    background-color: red; /* Cor de fundo vermelha */
+    color: white; /* Cor do "X" */
+    border: none; /* Remove borda */
+    border-radius: 50%; /* Torna o botão circular */
+    font-size: 24px; /* Tamanho do "X" */
+    font-weight: bold; /* Negrito para o "X" */
+    display: flex; /* Centraliza o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    cursor: pointer; /* Altera o cursor ao passar o mouse */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    transition: background-color 0.3s, transform 0.2s; /* Efeito ao passar o mouse */
+    padding-bottom: 8px;
+  }
+  
+  .close-cart-button:hover {
+    background-color: darkred; /* Escurece a cor ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+  }
+  
+  .close-cart-button:active {
+    transform: scale(0.95); /* Reduz o tamanho ao clicar */
+  }
 
 @media (max-width : 768px) {
     .side-bar {
         background: var(--secondary-light);
         position: fixed;
         top: 0;
-        left: 10em;
+        /* left: 10em; */
+        left: 0em;
         width: 100%;
         height: 87em;
-        padding: 7em 0;
         opacity: 100%;
         transition: all 0.5s ease;
         z-index: 10;
-        margin-top: 67px;
+        /* margin-top: 67px; */
+        
     }
 
     #ajustes {
@@ -138,7 +253,7 @@ nav.hidden {
 
 
 /* Extra Small Devices, Phones */
-@media (min-width: 768px) and (max-width: 990px) {
+/* @media (min-width: 768px) and (max-width: 990px) {
     .side-bar {
         background: var(--secondary-light);
         position: fixed;
@@ -151,7 +266,7 @@ nav.hidden {
         transition: all 0.5s ease;
         z-index: 10;
         margin-top: 67px;
-    } 
+    }
 
     .hide-menu {
         display: none;
@@ -178,16 +293,10 @@ nav.hidden {
 
     .navbar-expand-lg {
         width: 100%;
-        /* display: flex; */
-        /* justify-content: space-around; */
-        /* background: #000;
-      background: var(--secondary); */
         opacity: 95%;
 
         position: fixed;
-        /* top: 0;
-      left: 0;
-      bottom: 0; */
+       
         z-index: 10;
     }
 
@@ -199,4 +308,4 @@ nav.hidden {
         margin: 0px 10px 0px 10px;
     }
 
-}
+} */

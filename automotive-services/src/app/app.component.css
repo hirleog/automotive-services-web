@@ -10,7 +10,7 @@
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 998;
     transition: background-color 0.3s ease;
     bottom: 87px;
     width: 40px;
