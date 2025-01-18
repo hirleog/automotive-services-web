@@ -15,45 +15,44 @@ export class ServicesComponent implements OnInit {
         image: '../../../assets/lavagem-completa.webp',
         title: 'Lavagem Detalhada',
         description: 'Limpeza completa do veículo, incluindo bancos, carpetes e motor. Seu carro como novo! Limpeza interna e externa impecável.',
-        // link: '#'
+        price: 150,
       },
       {
         image: '../../../assets/lavagem-normal.webp',
         title: 'Lavagem convencional',
         description: 'Limpeza rápida e eficiente da lataria e vidros do seu carro. Mantenha seu carro sempre limpo com nossa lavagem convencional.',
-        // link: '#'
+        price: 250,
       },
 
       {
         image: '../../../assets/vitrificacao.webp',
         title: 'Vitrificação de Pintura',
         description: 'Aplicação de uma camada protetora de cerâmica líquida, que aumenta a resistência da pintura contra riscos, sujeira e agentes climáticos.',
-        // link: '#'
+        price: 450,
       },
       {
         image: '../../../assets/mini.webp',
         title: 'Polimento Automotivo',
         description: 'Restauração do brilho da pintura, removendo pequenos riscos e imperfeições para um acabamento liso e reluzente.',
-        // link: '#'
+        price: 500,
       },
       {
         image: '../../../assets/card3.webp',
         title: 'Higienização Interna',
         description: 'Aplicação de um produto que protege os tecidos e couro contra manchas e sujeiras, facilitando a limpeza e prolongando a vida útil dos materiais.',
-        // link: '#'
+        price: 670,
       },
-
-
       {
         image: '../../../assets/lavagem-motor.webp',
         title: 'Lavagem de Motor',
         description: 'Limpeza do motor, removendo sujeira e aumentando a vida útil. Deixa o motor do seu carro brilhando e protegido contra corrosão.',
+        price: 2000,
       },
       {
         image: '../../../assets/chassi.webp',
         title: 'Lavagem de Chassi',
         description: 'Protege o chassi contra ferrugem e prolonga a vida útil do seu veículo. Limpeza completa do chassi, removendo terra e resíduos.',
-        // link: '#'
+        price: 200,
       },
     ];
 
@@ -63,7 +62,7 @@ export class ServicesComponent implements OnInit {
   }
 
   public addToCart(product: any): void {
-    
+
     this.cartService.addItem(product);
   }
 

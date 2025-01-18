@@ -13,8 +13,9 @@
         </a>
       </div>
 
-      <ng-container >
-        <app-cart id="cart"></app-cart>
+      <ng-container>
+        <!-- <app-cart id="cart"></app-cart> -->
+        <div>i</div>
       </ng-container>
     </div>
   </div>
@@ -26,44 +27,14 @@
 
 <nav id="big-screen" class="d-none d-lg-block navbar-light navbar navbar-expand-lg">
 
-    <div id="logo">
-      <a class="tag-a-effect" href="#inicio">
-        <img src="../../../assets/molinari-logo.webp" class="container-fluid" alt="error" />
-      </a>
-    </div>
-
-    <div class=" ">
-      <ul class="big-screen-nav me-auto mb-lg-0 ">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#home">Página Inicial</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#about">Sobre</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#services">Serviços</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#reviews">Clientes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#contato">Contato</a>
-        </li>
-      </ul>
-    </div>
-
-    <ng-container>
-      <app-cart id="cart"></app-cart>
-    </ng-container>
-
-  <!-- <div id="logo">
+  <div id="logo">
     <a class="tag-a-effect" href="#inicio">
       <img src="../../../assets/molinari-logo.webp" class="container-fluid" alt="error" />
     </a>
   </div>
 
-  <div class="hide-menu" style="display: flex; justify-content: flex-start">
-    <ul class="navbar-nav me-auto mb-lg-0">
+  <div class=" ">
+    <ul class="big-screen-nav me-auto mb-lg-0 ">
       <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="#home">Página Inicial</a>
       </li>
@@ -83,31 +54,32 @@
   </div>
 
   <ng-container>
-    <app-cart id="cart"></app-cart>
-  </ng-container> -->
+    <!-- <app-cart id="cart"></app-cart> -->
+    <div>i</div>
+  </ng-container>
 
 </nav>
 
 <div data-aos="fade-right" class="side-bar" *ngIf="openClose">
-  <div class="container">
-    <div>
-      <ul class="navbar-nav">
-        <li class="side-item">
-          <a (click)="menu()" class="nav-link active" aria-current="page" href="#home">Pagina Inicial</a>
-        </li>
-        <li class="side-item">
-          <a (click)="menu()" class="nav-link active" aria-current="page" href="#about">Sobre</a>
-        </li>
-        <li class="side-item">
-          <a (click)="menu()" class="nav-link active" aria-current="page" href="#services">Serviços</a>
-        </li>
-        <li class="side-item">
-          <a (click)="menu()" class="nav-link active" aria-current="page" href="#reviews">Clientes</a>
-        </li>
-        <li class="side-item">
-          <a (click)="menu()" class="nav-link active" aria-current="page" href="#contato">Contato</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <!-- <div class="container"> -->
+  <!-- <div> -->
+  <ul class="navbar-nav">
+    <li class="side-item">
+      <a (click)="menu()" class="nav-link active" aria-current="page" href="#home">Pagina Inicial</a>
+    </li>
+    <li class="side-item">
+      <a (click)="menu()" class="nav-link active" aria-current="page" href="#about">Sobre</a>
+    </li>
+    <li class="side-item">
+      <a (click)="menu()" class="nav-link active" aria-current="page" href="#services">Serviços</a>
+    </li>
+    <li class="side-item">
+      <a (click)="menu()" class="nav-link active" aria-current="page" href="#reviews">Clientes</a>
+    </li>
+    <li class="side-item">
+      <a (click)="menu()" class="nav-link active" aria-current="page" href="#contato">Contato</a>
+    </li>
+  </ul>
 </div>
+<!-- </div> -->
+<!-- </div> -->

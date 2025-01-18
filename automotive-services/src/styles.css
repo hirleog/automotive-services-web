@@ -22,6 +22,8 @@
   /* largura da barra vertical */
   height: 12px;
   /* altura da barra horizontal */
+  display: none;
+
 }
 
 /* Estiliza o fundo da barra de rolagem */

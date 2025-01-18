@@ -3,87 +3,13 @@ html body {
     max-width: 100%;
 }
 
-.nav-link {
-    font-weight: 500;
-    text-transform: uppercase;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 15px;
-    margin-right: 15px;
-    border-bottom: solid 4px transparent;
-    color: var(--light) !important;
-}
-
-.nav-link:hover {
-    border-bottom: solid 4px var(--primary);
-    color: var(--main-color);
-}
-
-.navbar-expand-lg {
-    top: 0 !important;
-    transition: top 0.6s ease-in-out !important;
-    z-index: 999 !important;
-
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-
-    position: fixed;
-    background-color: #00000013;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: background-color 0.3s ease-in-out;
-}
-
-nav.hidden {
-    top: -100% !important;
-    /* Move o navbar para cima, ocultando-o */
-}
-
-/* Transição suave para o efeito de ocultação */
-
-
-.navbar-collapse {
-    flex-grow: 0 !important;
-}
-
-/* FIM DO NAVBAR */
-
-/* icones redes */
-.flex-icons {
-    display: flex;
-    justify-content: flex-end;
-}
-
-#ajustes {
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    margin: 0px 10px 0px 10px;
-}
-
-.icons-redes a {
-    font-size: 25px;
-    margin-right: 15px;
-}
-
-#burger i {
-    display: none;
-    color: var(--primary);
-    margin: 15px 10px 0px 0px;
-}
-
-#burger i {
-    display: none;
-}
-
 
 #cart-icon {
     top: 10px;
     left: 10px;
     font-size: 24px;
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
+    background-color: #f4f4f433;
+    border: 1px solid #ffffff2b;
     border-radius: 50px;
     padding: 0px 10px;
     display: flex;
@@ -96,16 +22,6 @@ nav.hidden {
     margin-right: 5px;
     font-weight: bold;
     color: #000;
-}
-
-.cart-container {
-    /* max-width: 600px; */
-    margin: 2rem auto;
-    padding: 1rem;
-    /* background: #fff; */
-    /* border: 1px solid #ddd; */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cart-item {
@@ -142,136 +58,145 @@ nav.hidden {
 .price {
     font-weight: bold;
     color: #007b5e;
+
 }
 
-.remove-btn {
-    background: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+.remove {
+    font-weight: bold;
+    color: #ff4d4d;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
-.remove-btn:hover {
-    background: #e60000;
-}
-
-.side-bar {
-    background: var(--secondary-light);
-    position: fixed;
-    top: 0;
-    /* left: 10em; */
-    left: 0em;
-    width: 100%;
-    height: 87em;
-    opacity: 100%;
-    transition: all 0.5s ease;
-    z-index: 10;
-    /* margin-top: 67px; */
-}
 
 .scrollable-container {
-    height: 52em;
-    /* overflow-y: auto; */
-    padding: 10px;
+    height: 100% !important;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
 
-    overflow-y: scroll; /* Permite rolar verticalmente */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
-  }
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    max-height: 40em;
+    overflow-y: auto;
+}
 
-  .scrollable-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari e Edge */
-  }
+.scrollable-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari e Edge */
+}
 
-  .close-cart-button {
-    width: 40px; /* Largura do círculo */
-    height: 40px; /* Altura do círculo */
-    background-color: red; /* Cor de fundo vermelha */
-    color: white; /* Cor do "X" */
-    border: none; /* Remove borda */
-    border-radius: 50%; /* Torna o botão circular */
-    font-size: 24px; /* Tamanho do "X" */
-    font-weight: bold; /* Negrito para o "X" */
-    display: flex; /* Centraliza o conteúdo */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    cursor: pointer; /* Altera o cursor ao passar o mouse */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
-    transition: background-color 0.3s, transform 0.2s; /* Efeito ao passar o mouse */
+.close-cart-button {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
     padding-bottom: 8px;
-  }
-  
-  .close-cart-button:hover {
-    background-color: darkred; /* Escurece a cor ao passar o mouse */
-    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
-  }
-  
-  .close-cart-button:active {
-    transform: scale(0.95); /* Reduz o tamanho ao clicar */
-  }
+}
 
-@media (max-width : 768px) {
-    .side-bar {
-        background: var(--secondary-light);
-        position: fixed;
-        top: 0;
-        /* left: 10em; */
-        left: 0em;
-        width: 100%;
-        height: 87em;
-        opacity: 100%;
-        transition: all 0.5s ease;
-        z-index: 10;
-        /* margin-top: 67px; */
-        
-    }
+.close-cart-button:hover {
+    background-color: darkred;
+    transform: scale(1.1);
+}
 
-    #ajustes {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0px 10px 0px 10px;
-    }
-
-    #burger i {
-        display: block;
-        cursor: pointer;
-    }
-
-    .nav-item a {
-        display: flex;
-        justify-content: center;
-        display: none;
-        visibility: visible;
-    }
-
-
+.close-cart-button:active {
+    transform: scale(0.95);
 }
 
 
-/* Extra Small Devices, Phones */
-/* @media (min-width: 768px) and (max-width: 990px) {
-    .side-bar {
-        background: var(--secondary-light);
-        position: fixed;
-        top: 0;
-        left: 10em;
-        width: 100%;
-        height: 87em;
-        padding: 7em 0;
-        opacity: 100%;
-        transition: all 0.5s ease;
-        z-index: 10;
-        margin-top: 67px;
-    }
+#send-wtp-btn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* margin: 1.5em 0em 1em 7em; */
+}
 
-    .hide-menu {
-        display: none;
-    }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Cor semitransparente */
+    backdrop-filter: blur(5px);
+    /* Aplica o desfoque */
+    z-index: 999;
+    /* Fica acima do conteúdo */
+    /* display: none; */
+}
+
+
+/* Estilos do menu lateral do carrinho */
+.carrinho-lateral {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 34em;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    /* Fica acima do overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    /* Espaço para o botão flutuante */
+}
+
+.carrinho-lateral.ativo {
+    transform: translateX(0);
+}
+
+.finalizar-compra {
+    position: absolute;
+    bottom: 20px;
+    left: 11%;
+    /* transform: translateX(-50%); */
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    width: 80%;
+    /* padding: ; */
+    cursor: pointer;
+    z-index: 1002;
+}
+
+
+.finalizar-compra:hover {
+    background-color: #218838;
+}
+
+.finalizar-compra:active {
+    background-color: #1e7e34;
+}
+
+
+@media (max-width : 768px) {
+
+    #burger i {
+        display: block;
+        cursor: pointer;
+    }
 
     .nav-item a {
         display: flex;
@@ -280,32 +205,12 @@ nav.hidden {
         visibility: visible;
     }
 
-
-    .side-item {
-        display: block;
-    }
-
-    #burger i {
-        display: block;
-        cursor: pointer;
-
-    }
-
-    .navbar-expand-lg {
+    .scrollable-container {
         width: 100%;
-        opacity: 95%;
-
-        position: fixed;
-       
-        z-index: 10;
     }
 
-
-    #ajustes {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0px 10px 0px 10px;
+    .carrinho-lateral {
+        width: 100%;
     }
 
-} */
+}

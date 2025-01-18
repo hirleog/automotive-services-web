@@ -1,86 +1,45 @@
-<!-- <nav [ngClass]="{ 'hidden': scrolled }" data-aos="fade-down" class="navbar navbar-expand-lg navbar-light">
-
-    <div class="collapse navbar-collapse" data-aos="fade-down" id="ajustes">
-        <div id="burger" style="display: flex; justify-content: flex-start; padding-top: -10px">
-            <i data-aos="fade-down" (click)="menu()" class="fa-solid fa-bars"></i>
-        </div>
-
-        <div class="navbar-brand" style="display: flex">
-            <div class="container">
-                <a class="tag-a-effect" href="#inicio">
-                    <img src="../../../assets/molinari-logo.webp" class="container-fluid" alt="error"
-                        style="width: 7em" />
-                </a>
-            </div>
-        </div>
-
-        <div id="fake"></div>
-    </div>
-
-    <div class="hide-menu" style="display: flex; justify-content: flex-start">
-        <ul class="navbar-nav me-auto mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#home">Página Inicial</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#about">Sobre</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#services">Serviços</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#reviews">Clientes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#contato">Contato</a>
-            </li>
-        </ul>
-    </div>
-
-    <div id="cart-icon">
-        <span class="cart-count">{{ itemCount }}</span>
-        🛒
-    </div>
-
-</nav> -->
-
-
 <div id="cart-icon" style="z-index: 10;" (click)="menu()">
-    <span class="cart-count">{{ itemCount }}</span>
+    <span class="cart-count" style="color: var(--primary);">{{ itemCount }}</span>
     🛒
 </div>
 
-<div class="" data-aos="fade-right" class="side-bar" *ngIf="openClose">
-    <div class="cart-container">
+<div *ngIf="openClose === true" (click)="openClose = false" class="overlay"></div>
+
+<div data-aos="fade-right" class=" carrinho-lateral" *ngIf="openClose">
+    <div class="cart-container scrollable-container">
         <div class="d-flex justify-content-between" style="z-index: 1000;">
             <h3>Meu Carrinho</h3>
             <button class="close-cart-button" (click)="closeCart()">
                 &times;
             </button>
         </div>
-        <!-- Lista de produtos -->
-        <div class="scrollable-container" *ngIf="items.length > 0; else emptyCart">
+        <div class="p-3" *ngIf="items.length > 0; else emptyCart">
             <div *ngFor="let item of items; let i = index" class="cart-item">
                 <img [src]="item.image" alt="{{ item.title }}" class="product-image img-fluid" />
                 <div class="item-details">
                     <h4>{{ item.title }}</h4>
-                    <p>{{ item.description }}</p>
-                    <!-- <p class="price">R$ {{ item.price | number:'1.2-2' }}</p> -->
+                    <!-- <p>{{ item.description }}</p> -->
                     <div class="d-flex">
-
-                        <p class="price mr-5">R$ 100,00</p>
-                        <button class="remove-btn" (click)="removeFromCart(i)">Remover</button>
+                        <p class="price" style="margin-right: 1em;"> R$ {{ item.price | number:'1.2-2' }} </p>
+                        <p class="remove" (click)="removeFromCart(i)">Excluir</p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Template para carrinho vazio -->
-        
-        
         <ng-template #emptyCart>
             <p>Seu carrinho está vazio! Adicione alguns produtos.</p>
         </ng-template>
     </div>
-
+    <div id="send-wtp-btn" class="z-index-1000">
+        <div class="d-flex justify-content-center">
+            <button class="finalizar-compra d-flex justify-content-center">Finalizar Compra <i
+                    class="fa-brands fa-whatsapp fs-4" style="margin-left: 8px;"></i>
+            </button>
+        </div>
+        <div style="margin: 2em;">
+            <p>
+                Subtotal ({{ itemCount }} Produtos): R$ {{ totalPrice | number:'1.2-2' }}
+            </p>
+        </div>
+    </div>
 </div>
