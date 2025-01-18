@@ -7,6 +7,7 @@ import { BehaviorSubject, Observable, of } from 'rxjs';
 export class CartService {
   private itemCard: any[] = this.getCartFromLocalStorage(); // Inicializa com os dados do localStorage
   private itemCount = this.itemCard.length; // Define o contador inicial com base no tamanho da lista
+  private carrinhoAbertoSubject = new BehaviorSubject<boolean>(false);
 
   // BehaviorSubject para gerenciar estados reativos
   private itemCountSubject = new BehaviorSubject<number>(this.itemCount);
@@ -19,6 +20,17 @@ export class CartService {
   constructor() {
     // Sincroniza os dados iniciais do localStorage
     this.updateCartState();
+  }
+
+  abrirCarrinho() {
+    this.carrinhoAbertoSubject.next(true);
+  }
+  // Método para fechar o carrinho
+  fecharCarrinho() {
+    this.carrinhoAbertoSubject.next(false);
+  }
+  getCarrinhoStatus() {
+    return this.carrinhoAbertoSubject.asObservable();
   }
 
   // Função para adicionar item ao carrinho

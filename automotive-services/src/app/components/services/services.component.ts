@@ -15,7 +15,7 @@ export class ServicesComponent implements OnInit {
         image: '../../../assets/lavagem-completa.webp',
         title: 'Lavagem Detalhada',
         description: 'Limpeza completa do veículo, incluindo bancos, carpetes e motor. Seu carro como novo! Limpeza interna e externa impecável.',
-        price: 150,
+        price: 150.87,
       },
       {
         image: '../../../assets/lavagem-normal.webp',

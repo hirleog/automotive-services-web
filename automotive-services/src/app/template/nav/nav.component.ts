@@ -10,13 +10,14 @@ import { CartService } from 'src/app/services/cart.service';
 export class NavComponent implements OnInit {
 
   public openClose: boolean = false;
-  scrolled = false;
-  previousScrollPosition = window.pageYOffset;
-  navbarVisible = true;
-  lastScrollTop = 0;
+  public scrolled = false;
+  public previousScrollPosition = window.pageYOffset;
+  public navbarVisible = true;
+  public lastScrollTop = 0;
 
-  itemCount: number = 0;
+  public itemCount: number = 0;
   private subscription: Subscription = new Subscription();
+  private cardItemsSubscription: Subscription = new Subscription();
 
   constructor(private cartService: CartService) { }
 
@@ -25,12 +26,16 @@ export class NavComponent implements OnInit {
     // this.subscription = this.cartService.itemCount$.subscribe(
     //   (count) => (this.itemCount = count)
     // );
+
+    this.cardItemsSubscription = this.cartService.getItems().subscribe(items => {
+      this.itemCount = items.length;
+    });
   }
 
   public menu() {
     this.openClose = !this.openClose;
   }
-  
+
 
   // @HostListener('window:scroll', [])
   // onWindowScroll() {
@@ -46,6 +51,10 @@ export class NavComponent implements OnInit {
 
   //   this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   // }
+
+  abrirCarrinho() {
+    this.cartService.abrirCarrinho();
+  }
 
   ngOnDestroy(): void {
     // Cancela a inscrição ao destruir o componente

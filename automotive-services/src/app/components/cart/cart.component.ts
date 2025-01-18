@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { CartService } from 'src/app/services/cart.service';
+import { formatarValorEmReal } from 'src/app/utils/utils';
 
 @Component({
   selector: 'app-cart',
@@ -19,6 +20,10 @@ export class CartComponent implements OnInit {
 
   public cardObj: any = {};
   public totalPrice: any;
+  public cardItems: any[] = [];
+
+  public carrinhoAberto: boolean = false;
+  private carrinhoSubscription: Subscription = new Subscription();
 
   constructor(
     private cartService: CartService,
@@ -42,7 +47,7 @@ export class CartComponent implements OnInit {
       this.items = items;
       this.itemCount = items.length;
 
-      this.totalPrice = this.items.reduce((accumulator:any, produto:any) => accumulator + produto.price, 0);
+      this.totalPrice = this.items.reduce((accumulator: any, produto: any) => accumulator + produto.price, 0);
 
 
       console.log(this.totalPrice);
@@ -53,6 +58,10 @@ export class CartComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // Se inscreve para ouvir as mudanças na flag do carrinho
+    this.carrinhoSubscription = this.cartService.getCarrinhoStatus().subscribe(status => {
+      this.carrinhoAberto = status;
+    });
 
   }
 
@@ -81,12 +90,43 @@ export class CartComponent implements OnInit {
     localStorage.setItem('cartItems', JSON.stringify(this.items));
   }
 
-  public menu() {
-    this.openClose = !this.openClose;
-  }
-
   abrirCarrinho() {
     const carrinho = document.querySelector('.carrinho-lateral') as HTMLElement;
     carrinho.style.transform = 'translateX(0)';
+  }
+
+  fecharCarrinho() {
+    this.cartService.fecharCarrinho();
+  }
+  public sendCartMessage(): void {
+    let cardElements: string = '';
+    let cardElementsArr: any = [];
+    const totalFormatted: string = formatarValorEmReal(this.totalPrice);
+
+
+    this.cartService.getItems().subscribe(items => {
+      items.map((element, index) => {
+        cardElements += `${index + 1}x ${element.title} - ${element.price} %0A`;
+
+      });
+    });
+
+    // this.cardItems.forEach((element, index) => {
+    //   cardElements += `${index + 1}x ${element.title} - ${element.price} %0A`;
+    // });
+
+    const mensagem = `Meu carrinho:%0A%0A${cardElements} %0A Valor total do carrinho: R$ ${totalFormatted}.`;
+    const numeroWhatsApp = '5511973752898';
+
+    // const mensagemCodificada = encodeURIComponent(mensagem);
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
+    window.open(urlWhatsApp, '_blank');
+
+  }
+
+  ngOnDestroy(): void {
+    if (this.carrinhoSubscription) {
+      this.carrinhoSubscription.unsubscribe();
+    }
   }
 }

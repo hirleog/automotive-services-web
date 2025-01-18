@@ -14,8 +14,10 @@
       </div>
 
       <ng-container>
-        <!-- <app-cart id="cart"></app-cart> -->
-        <div>i</div>
+        <div id="cart-icon" style="z-index: 10;" (click)="abrirCarrinho()">
+          <span class="cart-count" style="color: var(--primary);">{{ itemCount }}</span>
+          🛒
+        </div>
       </ng-container>
     </div>
   </div>
@@ -54,8 +56,10 @@
   </div>
 
   <ng-container>
-    <!-- <app-cart id="cart"></app-cart> -->
-    <div>i</div>
+    <div id="cart-icon" style="z-index: 10;" (click)="abrirCarrinho()">
+      <span class="cart-count" style="color: var(--primary);">{{ itemCount }}</span>
+      🛒
+    </div>
   </ng-container>
 
 </nav>
