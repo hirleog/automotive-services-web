@@ -231,7 +231,14 @@ p {
   margin: 1em;
 }
 
-
+.alert {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1050;
+  background-color: var(--primary);
+  border-radius: 10em;
+}
 
 @media (min-width: 768px) and (max-width: 1200px) {
   #services {

@@ -37,7 +37,7 @@
                 <div class="card-bottom d-flex justify-content-between align-items-center">
                   <div class="d-flex align-items-center justify-content-center">
                     <button (click)="addToCart(card)" class="add-to-cart-btn">
-                      <i class="fas fa-shopping-cart"></i>
+                    <i class="fs-5">+</i>  <i class="fas fa-shopping-cart"></i>
                     </button>
                   </div>
                   <div>
@@ -59,3 +59,9 @@
   </div>
 
 </section>
+
+<!-- ALERTAS -->
+<div class="alert alert-info alert-dismissible fade show z-index-1000" *ngIf="showAlert" role="alert">
+  {{ alertMessage }}
+  <button type="button" class="btn-close" (click)="showAlert = false" aria-label="Close"></button>
+</div>

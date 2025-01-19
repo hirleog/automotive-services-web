@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/interfaces/product';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
@@ -8,51 +9,68 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class ServicesComponent implements OnInit {
 
-  public cards: Array<any> = []
+  public alertMessage: string | null = null; 
+  public showAlert: boolean = false; 
+
+  public cards: Array<Product> = []
   constructor(private cartService: CartService) {
     this.cards = [
       {
+        id: 1,
         image: '../../../assets/lavagem-completa.webp',
         title: 'Lavagem Detalhada',
         description: 'Limpeza completa do veículo, incluindo bancos, carpetes e motor. Seu carro como novo! Limpeza interna e externa impecável.',
         price: 150.87,
+        quantity: 1
       },
       {
+        id: 2,
         image: '../../../assets/lavagem-normal.webp',
         title: 'Lavagem convencional',
         description: 'Limpeza rápida e eficiente da lataria e vidros do seu carro. Mantenha seu carro sempre limpo com nossa lavagem convencional.',
         price: 250,
+        quantity: 1
       },
 
       {
+        id: 3,
         image: '../../../assets/vitrificacao.webp',
         title: 'Vitrificação de Pintura',
         description: 'Aplicação de uma camada protetora de cerâmica líquida, que aumenta a resistência da pintura contra riscos, sujeira e agentes climáticos.',
         price: 450,
+        quantity: 1
       },
       {
+        id: 4,
         image: '../../../assets/mini.webp',
         title: 'Polimento Automotivo',
         description: 'Restauração do brilho da pintura, removendo pequenos riscos e imperfeições para um acabamento liso e reluzente.',
         price: 500,
+        quantity: 1
       },
       {
+        id: 5,
         image: '../../../assets/card3.webp',
         title: 'Higienização Interna',
         description: 'Aplicação de um produto que protege os tecidos e couro contra manchas e sujeiras, facilitando a limpeza e prolongando a vida útil dos materiais.',
         price: 670,
+        quantity: 1
       },
       {
+        id: 6,
         image: '../../../assets/lavagem-motor.webp',
         title: 'Lavagem de Motor',
         description: 'Limpeza do motor, removendo sujeira e aumentando a vida útil. Deixa o motor do seu carro brilhando e protegido contra corrosão.',
         price: 2000,
+        quantity: 1
       },
       {
+        id: 7,
         image: '../../../assets/chassi.webp',
         title: 'Lavagem de Chassi',
         description: 'Protege o chassi contra ferrugem e prolonga a vida útil do seu veículo. Limpeza completa do chassi, removendo terra e resíduos.',
         price: 200,
+        quantity: 1
       },
     ];
 
@@ -61,9 +79,17 @@ export class ServicesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+ 
   public addToCart(product: any): void {
+    this.cartService.addItem(product).subscribe((response) => {
+      this.alertMessage = response.message;
+      this.showAlert = true;
 
-    this.cartService.addItem(product);
+      // Oculta o alerta após 3 segundos
+      setTimeout(() => {
+        this.showAlert = false;
+      }, 3000);
+    });
   }
 
   public goToServices(): void { }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Product } from 'src/app/interfaces/product';
 import { CartService } from 'src/app/services/cart.service';
 import { formatarValorEmReal } from 'src/app/utils/utils';
 
@@ -37,11 +38,6 @@ export class CartComponent implements OnInit {
       this.itemCount = this.items.length;
     }
 
-    // Inscreve-se no contador de itens
-    this.cartService.itemCount$.subscribe((count: any) => {
-      this.itemCount = count;
-    });
-
     // Inscreve-se na lista de itens
     this.cartService.items$.subscribe((items: any) => {
       this.items = items;
@@ -49,11 +45,7 @@ export class CartComponent implements OnInit {
 
       this.totalPrice = this.items.reduce((accumulator: any, produto: any) => accumulator + produto.price, 0);
 
-
-      console.log(this.totalPrice);
-
       this.saveCartToLocalStorage(); // Salva sempre que os itens mudam
-
     });
   }
 
@@ -65,7 +57,7 @@ export class CartComponent implements OnInit {
 
   }
 
-  public addToCart(product: any): void {
+  public addToCart(product: Product): void {
     this.cartService.addItem(product).subscribe(() => {
       this.saveCartToLocalStorage(); // Salva os itens atualizados
 
