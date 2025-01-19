@@ -1,18 +1,18 @@
 #banner-text h1 {
   margin-top: 1em;
-  color: var(--light);
+  color: var(--secondary);
   text-align: center;
 }
 
 p,
 a {
-  color: var(--light);
+  color: var(--secondary);
   text-align: center;
 }
 
 .hero-content {
   text-align: center;
-  color: #ffffff;
+  color: var(--secondary);
   position: absolute;
   top: 0;
   left: 0;
@@ -75,10 +75,6 @@ a {
   /* Coloca o overlay atrás do conteúdo, mas sobre o vídeo */
 }
 
-.bg-overlay-dark::before {
-  /* background-color: rgba(0, 0, 0, 0.555); */
-}
-
 .bg-overlay-dark:before {
   background-color: #00000094;
   opacity: 0.7;
@@ -87,7 +83,7 @@ a {
 /* Conteúdo sobre o vídeo */
 .content {
   position: relative;
-  color: var(--light);
+  color: var(--secondary);
   text-align: center;
   color: wheat;
   text-align: start;

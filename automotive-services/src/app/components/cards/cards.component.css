@@ -1,5 +1,9 @@
 #cards {
-    margin-bottom: -5em;
+    /* margin-bottom: -5em;
+    background-color: var(--light); */
+    margin-top: -3em;
+    padding: 4em 0em 4em 0em;
+    /* background-color: var(--light); */
 }
 
 .cards img {
@@ -8,16 +12,20 @@
 
 #ui-card {
     text-align: center;
-    color: white;
+    color: var(--light);
     padding: 45px 35px;
-    background-color: var(--secondary-transparent);
+    background-color: var(--secondary);
     width: 100%;
+    /* border: 1px var(--light) solid; */
+    border-radius: 8px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 #ui-card:hover {
 
-    /* background-color: var(--light); */
-    /* color: black; */
+    background-color: var(--primary);
+    color: var(--secondary);
     transform: translateY(-8px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
     /* border: 2px solid var(--light); */
@@ -40,6 +48,14 @@
     font-size: 24px;
 }
 
+h4,
+p {
+    color: var(--light);
+}
+
+.tag-a-effect:after {
+    bottom: -66px;
+}
 
 @media (max-width: 998px) {
     .about-content {

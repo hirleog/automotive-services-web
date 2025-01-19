@@ -1,52 +1,61 @@
-<section id="services" class="container spacement">
+<section id="services">
 
-  <div data-aos="fade-right" data-aos-duration="900">
-    <div id="content-section" class="content container">
-      <h1>
-        Os <span class="highlight">Melhores</span> Serviços
-      </h1>
-      <p class="pb-3" style="font-size: larger">
-        Oferecemos uma ampla gama de serviços com foco em precisão e cuidado, garantindo que cada veículo receba o
-        melhor tratamento. Nossa equipe especializada utiliza as técnicas mais avançadas para entregar resultados que
-        superam as expectativas, proporcionando satisfação e confiança em cada atendimento.
-      </p>
-      <a class="view-more-btn"
-        href="https://wa.me/5511973752898?text=Olá, tudo bem? Gostaria de esclarecer algumas duvidas e saber mais sobre os serviços!">Fale
-        Conosco</a>
+  <div class="container spacement">
+
+    <div data-aos="fade-right">
+      <div id="content-section" class="content container">
+        <h1>
+          Os <span class="highlight">Melhores</span> Serviços
+        </h1>
+        <p class="pb-3" style="font-size: larger">
+          Oferecemos uma ampla gama de serviços com foco em precisão e cuidado, garantindo que cada veículo receba o
+          melhor tratamento. Nossa equipe especializada utiliza as técnicas mais avançadas para entregar resultados que
+          superam as expectativas, proporcionando satisfação e confiança em cada atendimento.
+        </p>
+        <a class="view-more-btn"
+          href="https://wa.me/5511973752898?text=Olá, tudo bem? Gostaria de esclarecer algumas duvidas e saber mais sobre os serviços!">Fale
+          Conosco</a>
+      </div>
     </div>
-  </div>
 
-  <div class="container mt-4">
-    <div class="row">
-      <div *ngFor="let card of cards" class="col-lg-4 col-md-6 col-sm-12 card-spacement">
-        <!-- <div class="about_practice_icontext floating-card" (click)="wppMessageOptions(card.title)" data-aos="fade-up" -->
-        <div class="about_practice_icontext floating-card" data-aos="fade-up" data-aos-duration="600">
+    <div class="container mt-4">
+      <div class="row">
+        <div *ngFor="let card of cards" class="col-lg-4 col-md-6 col-sm-12 card-spacement">
+          <div class="about_practice_icontext floating-card" data-aos="fade-up" data-aos-duration="300">
 
-          <!-- Imagem do Card -->
-          <div class="card-image">
-            <img [src]="card.image">
-          </div>
+            <div class="card-image">
+              <img [src]="card.image">
+            </div>
 
-          <!-- Conteúdo do Card (Título e Descrição) -->
-          <div class="card-content">
-            <h4>{{ card.title }}</h4>
-            <p>{{ card.description }}</p>
-
-            <div class="d-flex">
-
-              <div class="product">
-                <button id="cart-btn" (click)="addToCart(card)">Adicionar ao Carrinho</button>
+            <div class="card-content">
+              <div  class="card-body">
+                <h4>{{ card.title }}</h4>
+                <p>{{ card.description }}</p>
               </div>
 
 
-              <a class="view-more-btn" (click)="wppMessageOptions(card.title)" href="">Consultar</a>
+                <div class="card-bottom d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <button (click)="addToCart(card)" class="add-to-cart-btn">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                  <div>
+                    <p class="price">
+                      <i class="fas fa-dollar-sign"></i> {{ card.price }}
+                    </p>
+                  </div>
+                </div>
+
+                <!-- <a class="view-more-btn" (click)="wppMessageOptions(card.title)" href="">Consultar</a> -->
             </div>
+
           </div>
-
         </div>
-      </div>
 
+      </div>
     </div>
+
   </div>
 
 </section>

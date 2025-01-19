@@ -1,7 +1,9 @@
 #reviews {
-    background-color: var(--secondary-dark);
+    background-color: var(--light);
     padding: 6em 0em 4em 0em;
-    /* margin: 0em 0em 3em 0em; */
+}
+h1 {
+    color: var(--secondary);
 }
 
 .card-review {
@@ -22,11 +24,11 @@
 
 .card-title {
     font-weight: bold;
-    color: var(--light);
+    color: var(--secondary);
 }
 
 .card-text {
-    color: var(--light) !important;
+    color: var(--secondary) !important;
 }
 
 

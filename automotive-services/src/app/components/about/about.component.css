@@ -35,7 +35,8 @@
 
 .stroke-text h2{
   line-height: 1.2em;
-  color: transparent;
+  /* color: transparent; */
+  color: var(--primary);
   -webkit-text-stroke: 1px var(--light);
   transition: all 0.3s;
   cursor: pointer;

@@ -100,25 +100,18 @@ export class CartComponent implements OnInit {
   }
   public sendCartMessage(): void {
     let cardElements: string = '';
-    let cardElementsArr: any = [];
     const totalFormatted: string = formatarValorEmReal(this.totalPrice);
-
 
     this.cartService.getItems().subscribe(items => {
       items.map((element, index) => {
-        cardElements += `${index + 1}x ${element.title} - ${element.price} %0A`;
+        cardElements += `${index + 1}x ${element.title} - R$${element.price} %0A`;
 
       });
     });
 
-    // this.cardItems.forEach((element, index) => {
-    //   cardElements += `${index + 1}x ${element.title} - ${element.price} %0A`;
-    // });
-
-    const mensagem = `Meu carrinho:%0A%0A${cardElements} %0A Valor total do carrinho: R$ ${totalFormatted}.`;
+    const mensagem = `Meu carrinho:%0A%0A${cardElements} %0A Valor total do carrinho: R$${totalFormatted}.`;
     const numeroWhatsApp = '5511973752898';
 
-    // const mensagemCodificada = encodeURIComponent(mensagem);
     const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
     window.open(urlWhatsApp, '_blank');
 

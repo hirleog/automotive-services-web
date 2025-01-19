@@ -11,9 +11,9 @@
 .ui-button-wpp:hover {
     background-color: var(--primary);
     border-color: var(--primary);
-    color: var(--light);
+    color: var(--secondary);
 }
 
 a {
-    color: var(--light);
+    color: var(--secondary);
 }

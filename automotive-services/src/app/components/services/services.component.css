@@ -1,5 +1,13 @@
 #services {
-  margin-top: 10em;
+  /* margin-top: 5em; */
+  margin-top: -3em;
+  padding: 4em 0em 4em 0em;
+  /* background-color: var(--light); */
+}
+
+h1,
+p {
+  color: var(--light);
 }
 
 .service-card {
@@ -31,10 +39,7 @@
 
 #sub-banner {
   width: 100%;
-  /* position: absolute;
-  z-index: -1;
 
-  background-color: rgba(4, 6, 7, 0.5); */
 }
 
 
@@ -63,13 +68,13 @@
 
 /* Card container */
 .about_practice_icontext {
-  background-color: #00000048;
+  background-color: rgba(255, 255, 255, 0);
   /* border: 1px solid #ddd; */
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  height: 425px;
+  height: 100%;
   /* Altura fixa para garantir que todos os cards tenham o mesmo tamanho */
   overflow: hidden;
   transition: all 0.3s ease;
@@ -82,7 +87,9 @@
   /* Torna o card ligeiramente transparente */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   /* Aumenta a sombra para dar um efeito de profundidade */
-  transform: scale(1.05);
+  transform: scale(1.01);
+  /* background-color: var(--primary); */
+
   /* Leve aumento do tamanho para o efeito de zoom */
 }
 
@@ -106,9 +113,12 @@
 
 /* Conteúdo do Card (Título e Descrição) */
 .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex-grow: 1;
-  /* Faz com que o conteúdo ocupe o restante do espaço */
-  padding: 25px;
+  /* Faz o conteúdo crescer para preencher a altura disponível */
+  padding: 15px;
 }
 
 .card-content h4 {
@@ -132,17 +142,26 @@
 
 /* Estilizando o ícone do carrinho */
 #cart-icon {
-  position: fixed;
+  position: sticky;
   top: 10px;
   left: 10px;
   font-size: 24px;
-  background-color: #f4f4f4;
-  border: 1px solid #ddd;
   border-radius: 50px;
   padding: 10px 20px;
   display: flex;
   align-items: center;
   cursor: pointer;
+
+}
+
+#cart-icon {
+  /* position: static; */
+  background-color: var(--primary);
+  border: 1px var(--secondary) solid;
+}
+
+#cart-icon:hover {
+  transform: scale(1.1);
 }
 
 /* Contador de itens no carrinho */
@@ -152,27 +171,65 @@
   color: #000;
 }
 
-
-
-
-/* .product {
-  text-align: center;
-  margin-top: 100px;
+/* Flexbox para alinhar preço e botão ao lado */
+.card-content .price-btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
 }
 
-#cart-btn {
-  font-size: 16px;
-  padding: 10px 20px;
-  background-color: #28a745;
+.price {
+  font-size: 1em;
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Botão de Adicionar ao Carrinho */
+.add-to-cart-btn {
+  background-color: var(--primary);
   color: #fff;
+  font-size: 1em;
   border: none;
-  border-radius: 5px;
+  padding: 10px 20px;
+  border-radius: 15em;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: background-color 0.3s ease;
 }
 
-#cart-btn:hover {
-  background-color: #218838;
-} */
+/* Ícone do carrinho e texto do botão */
+.add-to-cart-btn i {
+  margin-right: 8px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+
+
+
+
+
+.card-body {
+  flex-grow: 1;
+  /* Permite que o conteúdo da descrição ocupe o espaço restante */
+  margin-bottom: 10px;
+  /* Adiciona algum espaçamento entre a descrição e o rodapé */
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 1em;
+}
 
 
 
