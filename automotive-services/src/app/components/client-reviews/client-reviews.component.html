@@ -8,8 +8,32 @@
     </div>
 
 
+    <div id="feedback-carousel" class="container py-5 desktop-tablet" style="padding: 0px 0px;"
+        data-aos="fade-down" data-aos-duration="300">
 
-    <div id="feedback-carousel" class="container py-5 desktop-tablet" data-aos="fade-down" data-aos-duration="300">
+        <div id="review-header" class="container">
+            <div>
+                <div class="d-flex align-items-center">
+                    <img src="../../../assets/google-icon.webp" class="img-fluid" style="width: 7em;" alt="">>
+                    <h4>Avaliações</h4>
+                </div>
+
+                <!-- Estrelas -->
+                <div id="google-stars" class="stars mt-3 d-flex align-items-center">
+                    <h4 class="mt-1" style="margin-right: 10px;">5.0</h4>
+                    <ng-container *ngFor="let star of getStars(5)">
+                        <i class="fas fa-star text-warning"></i>
+                    </ng-container>
+                </div>
+            </div>
+
+            <div class="button-container d-flex justify-content-end mt-4">
+                <a href="https://www.google.com/search?hl=pt-BR&gl=br&q=Molinari+Details+-+R.+Lav%C3%ADnia+Ribeiro,+53a+-+Vila+Diva+(Zona+Leste),+S%C3%A3o+Paulo+-+SP,+03351-110&ludocid=16277086120139314618&lsig=AB86z5V4fAXtr21lj_rts62Ep0x#lrd=0x94ce5d8ecb0218ad:0xe1e3d396295855ba,3"
+                    class="custom-button btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+                    Avalie-nos no Google
+                </a>
+            </div>
+        </div>
         <div id="carouselFeedbacks" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item" *ngFor="let group of feedbackGroups; let i = index" [class.active]="i === 0">
@@ -41,13 +65,13 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFeedbacks"
-                data-bs-slide="prev">
+            <button class="carousel-control-prev" style="margin-left: -32px;" type="button"
+                data-bs-target="#carouselFeedbacks" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselFeedbacks"
-                data-bs-slide="next">
+            <button class="carousel-control-next" style="margin-right: -32px;" type="button"
+                data-bs-target="#carouselFeedbacks" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Próximo</span>
             </button>
@@ -57,7 +81,29 @@
 
     <!-- CARROSSEL PARA MOBILE -->
 
-    <div id="feedback-carousel" class="container py-5 mobile">
+    <div id="feedback-carousel" class="container py-5  mobile">
+        <div id="review-header" class="container mb-4">
+            <div>
+                <div class="d-flex align-items-center">
+                    <img src="../../../assets/google-icon.webp" class="img-fluid" style="width: 7em;" alt="">>
+                    <h4>Avaliações</h4>
+                </div>
+
+                <div id="google-stars" class="stars mt-3 d-flex align-items-center">
+                    <h4 class="mt-1" style="margin-right: 10px;">5.0</h4>
+                    <ng-container *ngFor="let star of getStars(5)">
+                        <i class="fas fa-star text-warning"></i>
+                    </ng-container>
+                </div>
+            </div>
+
+            <div class="button-container d-flex justify-content-end mt-4">
+                <a href="https://www.google.com/search?hl=pt-BR&gl=br&q=Molinari+Details+-+R.+Lav%C3%ADnia+Ribeiro,+53a+-+Vila+Diva+(Zona+Leste),+S%C3%A3o+Paulo+-+SP,+03351-110&ludocid=16277086120139314618&lsig=AB86z5V4fAXtr21lj_rts62Ep0x#lrd=0x94ce5d8ecb0218ad:0xe1e3d396295855ba,3"
+                    class="custom-button btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+                    Avalie-nos no Google
+                </a>
+            </div>
+        </div>
         <div id="carouselFeedbacks2" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item" *ngFor="let feedback of feedbacks; let i = index" [class.active]="i === 0">

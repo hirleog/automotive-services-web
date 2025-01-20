@@ -32,6 +32,7 @@
     "@types/jasminewd2": "^2.0.13",
     "@types/node": "^12.20.55",
     "@types/selenium-webdriver": "^4.1.26",
+    "@types/swiper": "^6.0.0",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",

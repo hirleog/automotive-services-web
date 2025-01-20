@@ -18,6 +18,7 @@ import { WppBtnComponent } from './components/wpp-btn/wpp-btn.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { NavComponent } from './template/nav/nav.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { NavComponent } from './template/nav/nav.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [BooksService],
   bootstrap: [AppComponent]

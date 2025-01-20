@@ -9,79 +9,156 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class ServicesComponent implements OnInit {
 
-  public alertMessage: string | null = null; 
-  public showAlert: boolean = false; 
+  public alertMessage: string | null = null;
+  public showAlert: boolean = false;
 
   public cards: Array<Product> = []
   public alertIndicator: boolean = false;
-  
+
   constructor(private cartService: CartService) {
+    // this.cards = [
+    //   {
+    //     id: 1,
+    //     image: '../../../assets/lavagem-completa.webp',
+    //     title: 'Lavagem Detalhada',
+    //     description: 'Limpeza completa do veículo, incluindo bancos, carpetes e motor. Seu carro como novo! Limpeza interna e externa impecável.',
+    //     price: 150.87,
+    //     quantity: 1
+    //   },
+    //   {
+    //     id: 2,
+    //     image: '../../../assets/lavagem-normal.webp',
+    //     title: 'Lavagem convencional',
+    //     description: 'Limpeza rápida e eficiente da lataria e vidros do seu carro. Mantenha seu carro sempre limpo com nossa lavagem convencional.',
+    //     price: 250,
+    //     quantity: 1
+    //   },
+
+    //   {
+    //     id: 3,
+    //     image: '../../../assets/vitrificacao.webp',
+    //     title: 'Vitrificação de Pintura',
+    //     description: 'Aplicação de uma camada protetora de cerâmica líquida, que aumenta a resistência da pintura contra riscos, sujeira e agentes climáticos.',
+    //     price: 450,
+    //     quantity: 1
+    //   },
+    //   {
+    //     id: 4,
+    //     image: '../../../assets/mini.webp',
+    //     title: 'Polimento Automotivo',
+    //     description: 'Restauração do brilho da pintura, removendo pequenos riscos e imperfeições para um acabamento liso e reluzente.',
+    //     price: 500,
+    //     quantity: 1
+    //   },
+    //   {
+    //     id: 5,
+    //     image: '../../../assets/card3.webp',
+    //     title: 'Higienização Interna',
+    //     description: 'Aplicação de um produto que protege os tecidos e couro contra manchas e sujeiras, facilitando a limpeza e prolongando a vida útil dos materiais.',
+    //     price: 670,
+    //     quantity: 1
+    //   },
+    //   {
+    //     id: 6,
+    //     image: '../../../assets/lavagem-motor.webp',
+    //     title: 'Lavagem de Motor',
+    //     description: 'Limpeza do motor, removendo sujeira e aumentando a vida útil. Deixa o motor do seu carro brilhando e protegido contra corrosão.',
+    //     price: 2000,
+    //     quantity: 1
+    //   },
+    //   {
+    //     id: 7,
+    //     image: '../../../assets/chassi.webp',
+    //     title: 'Lavagem de Chassi',
+    //     description: 'Protege o chassi contra ferrugem e prolonga a vida útil do seu veículo. Limpeza completa do chassi, removendo terra e resíduos.',
+    //     price: 200,
+    //     quantity: 1
+    //   },
+    // ];
+
+
     this.cards = [
       {
         id: 1,
-        image: '../../../assets/lavagem-completa.webp',
-        title: 'Lavagem Detalhada',
-        description: 'Limpeza completa do veículo, incluindo bancos, carpetes e motor. Seu carro como novo! Limpeza interna e externa impecável.',
-        price: 150.87,
-        quantity: 1
+        images: [
+          '../../../assets/tradicional1.webp',
+          '../../../assets/tradicional2.webp',
+          '../../../assets/tradicional3.webp',
+        ],
+        title: 'Lavagem Tradicional',
+        description: 'Limpeza prática e eficiente para a lataria e vidros, mantendo seu carro sempre com aparência de novo, sem complicação.',
+        price: 90,
+        quantity: 1,
       },
       {
         id: 2,
-        image: '../../../assets/lavagem-normal.webp',
-        title: 'Lavagem convencional',
-        description: 'Limpeza rápida e eficiente da lataria e vidros do seu carro. Mantenha seu carro sempre limpo com nossa lavagem convencional.',
-        price: 250,
-        quantity: 1
+        images: [
+          '../../../assets/interior2.webp',
+          '../../../assets/interior.webp',
+          '../../../assets/interior3.webp',
+        ],
+        title: 'Higienização de Interior',
+        description: 'Eliminamos sujeira, poeira e odores, deixando o interior do seu carro limpo e renovado, proporcionando um ambiente mais saudável.',
+        price: 500,
+        quantity: 1,
       },
-
       {
         id: 3,
-        image: '../../../assets/vitrificacao.webp',
-        title: 'Vitrificação de Pintura',
-        description: 'Aplicação de uma camada protetora de cerâmica líquida, que aumenta a resistência da pintura contra riscos, sujeira e agentes climáticos.',
-        price: 450,
-        quantity: 1
+        images: [
+          '../../../assets/detalhada1.webp',
+          '../../../assets/detalhada4.webp',
+          '../../../assets/detalhada2.webp',
+          '../../../assets/detalhada3.webp',
+        ],
+        title: 'Lavagem Detalhada',
+        description: 'Tratamento completo para o seu veículo, com limpeza interna e externa detalhada, deixando cada canto do carro impecável e protegido.',
+        price: 150,
+        quantity: 1,
       },
       {
         id: 4,
-        image: '../../../assets/mini.webp',
-        title: 'Polimento Automotivo',
-        description: 'Restauração do brilho da pintura, removendo pequenos riscos e imperfeições para um acabamento liso e reluzente.',
-        price: 500,
-        quantity: 1
+        images: [
+          '../../../assets/motor2.webp',
+          '../../../assets/motor4.webp',
+          '../../../assets/motor3.webp',
+          '../../../assets/motor1.webp',
+        ],
+        title: 'Lavagem de Motor',
+        description: 'Limpeza do motor com produtos especiais, removendo sujeiras e resíduos, ajudando a aumentar a durabilidade e o desempenho do motor.',
+        price: 180,
+        quantity: 1,
       },
       {
         id: 5,
-        image: '../../../assets/card3.webp',
-        title: 'Higienização Interna',
-        description: 'Aplicação de um produto que protege os tecidos e couro contra manchas e sujeiras, facilitando a limpeza e prolongando a vida útil dos materiais.',
-        price: 670,
-        quantity: 1
+        images: [
+          '../../../assets/farois1.webp',
+          '../../../assets/farois2.webp',
+        ],
+        title: 'Restauração de Faróis',
+        description: 'Restauramos o brilho dos seus faróis, removendo oxidação e melhorando a iluminação, garantindo maior segurança à noite.',
+        price: 200,
+        quantity: 1,
       },
       {
         id: 6,
-        image: '../../../assets/lavagem-motor.webp',
-        title: 'Lavagem de Motor',
-        description: 'Limpeza do motor, removendo sujeira e aumentando a vida útil. Deixa o motor do seu carro brilhando e protegido contra corrosão.',
-        price: 2000,
-        quantity: 1
-      },
-      {
-        id: 7,
-        image: '../../../assets/chassi.webp',
-        title: 'Lavagem de Chassi',
-        description: 'Protege o chassi contra ferrugem e prolonga a vida útil do seu veículo. Limpeza completa do chassi, removendo terra e resíduos.',
-        price: 200,
-        quantity: 1
+        images: [
+          '../../../assets/vitrificacao1.webp',
+          '../../../assets/vitrificacao2.webp',
+        ],
+        title: 'Vitrificação de Pintura',
+        description: 'Aplicação de camada protetora de cerâmica líquida, que garante brilho, resistência e proteção da pintura contra riscos e sujeira.',
+        price: 1000,
+        quantity: 1,
       },
     ];
+
 
   }
 
   ngOnInit(): void {
   }
 
- 
+
   public addToCart(product: any): void {
     this.cartService.addItem(product).subscribe((response) => {
       this.alertMessage = response.message;

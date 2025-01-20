@@ -23,13 +23,13 @@
       </div>
     </div>
 
-    <div class="container mt-4">
+    <!-- <div class="container mt-4">
       <div class="row">
         <div *ngFor="let card of cards" class="col-lg-4 col-md-6 col-sm-12 card-spacement">
           <div class="about_practice_icontext floating-card" data-aos="fade-up" data-aos-duration="300">
 
             <div class="card-image">
-              <img [src]="card.image">
+              <img [src]="card.images">
             </div>
 
             <div class="card-content">
@@ -52,15 +52,64 @@
                 </div>
               </div>
 
-              <!-- <a class="view-more-btn" (click)="wppMessageOptions(card.title)" href="">Consultar</a> -->
             </div>
-
+            
           </div>
         </div>
+        
+      </div>
+    </div> -->
+    <!-- <a class="view-more-btn" (click)="wppMessageOptions(card.title)" href="">Consultar</a> -->
 
+
+    
+    <div class="container mt-4">
+      <div class="row">
+        <div *ngFor="let card of cards" class="col-lg-4 col-md-6 col-sm-12 card-spacement">
+          <div class="about_practice_icontext floating-card" data-aos="fade-up" data-aos-duration="300">
+            
+            <!-- Bootstrap Carousel -->
+            <div id="carousel-{{ card.id }}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+              <div class="carousel-inner">
+                <div *ngFor="let image of card.images; let i = index" class="carousel-item" [class.active]="i === 0">
+                  <img [src]="image" class="d-block w-100" alt="Imagem do card">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" attr.data-bs-target="#carousel-{{ card.id }}" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" attr.data-bs-target="#carousel-{{ card.id }}" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+    
+            <div class="card-content">
+              <div class="card-body">
+                <h4>{{ card.title }}</h4>
+                <p>{{ card.description }}</p>
+              </div>
+    
+              <div class="card-bottom d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center justify-content-center">
+                  <button (click)="addToCart(card)" class="add-to-cart-btn">
+                    <i class="fs-5">+</i> <i class="fas fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <p class="price" style="font-size: 25px;">
+                    R$ {{ card.price }}
+                  </p>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
       </div>
     </div>
-
+    
   </div>
 
 </section>

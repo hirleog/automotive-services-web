@@ -10,7 +10,7 @@
     <div class="cart-container scrollable-container">
         <div class="p-3" *ngIf="items.length > 0; else emptyCart">
             <div *ngFor="let item of items; let i = index" class="cart-item">
-                <img [src]="item.image" alt="{{ item.title }}" class="product-image img-fluid" />
+                <img [src]="item.images[0]" alt="{{ item.title }}" class="product-image img-fluid" />
                 <div class="item-details">
                     <h4>{{ item.title }}</h4>
 
