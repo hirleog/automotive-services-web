@@ -10,7 +10,7 @@ h1 {
     transition: all 0.3s ease-in-out;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
-    background-color: var(--secondary-transparent);
+    background-color: var(--secondary);
 }
 
 .card-review:hover {
@@ -24,11 +24,11 @@ h1 {
 
 .card-title {
     font-weight: bold;
-    color: var(--secondary);
+    color: var(--light);
 }
 
 .card-text {
-    color: var(--secondary) !important;
+    color: var(--light) !important;
 }
 
 

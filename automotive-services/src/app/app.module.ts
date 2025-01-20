@@ -8,15 +8,15 @@ import { BooksService } from './apagar/books.service';
 import { CrudLivrosComponent } from './apagar/crud-livros/crud-livros.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ClientReviewsComponent } from './components/client-reviews/client-reviews.component';
-import { ServicesComponent } from './components/services/services.component';
-import { FooterComponent } from './template/footer/footer.component';
-import { NavComponent } from './template/nav/nav.component';
 import { CardsComponent } from './components/cards/cards.component';
-import { WppBtnComponent } from './components/wpp-btn/wpp-btn.component';
+import { CartComponent } from './components/cart/cart.component';
+import { ClientReviewsComponent } from './components/client-reviews/client-reviews.component';
 import { MidBannerComponent } from './components/mid-banner/mid-banner.component';
 import { QuestionsComponent } from './components/questions/questions.component';
-import { CartComponent } from './components/cart/cart.component';
+import { ServicesComponent } from './components/services/services.component';
+import { WppBtnComponent } from './components/wpp-btn/wpp-btn.component';
+import { FooterComponent } from './template/footer/footer.component';
+import { NavComponent } from './template/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { CartComponent } from './components/cart/cart.component';
     WppBtnComponent,
     MidBannerComponent,
     QuestionsComponent,
-    CartComponent
+    CartComponent,
   ],
   imports: [
     BrowserModule,

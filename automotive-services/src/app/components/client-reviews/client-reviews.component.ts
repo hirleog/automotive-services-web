@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { GoogleReviewsService } from 'src/app/services/google-reviews.service';
 
 @Component({
   selector: 'app-client-reviews',
@@ -6,6 +7,9 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./client-reviews.component.css']
 })
 export class ClientReviewsComponent implements OnInit {
+  reviews: any[] = [];
+  isLoading = true; // Indica carregamento
+  errorMessage: string | null = null; // Para erros
 
   feedbacks = [
     {
@@ -49,7 +53,9 @@ export class ClientReviewsComponent implements OnInit {
   feedbackGroups: any[][] = [];
   groupSize = 3; // Padrão: 3 feedbacks por grupo
 
-  constructor() { }
+  constructor(
+    private googleReviewsService: GoogleReviewsService
+  ) { }
 
   ngOnInit(): void {
     this.updateGroupSize();
@@ -84,4 +90,18 @@ export class ClientReviewsComponent implements OnInit {
     return new Array(rating).fill(0);  // Retorna um array de tamanho 'rating' para as estrelas
   }
 
+  public getGoogleReviews(): void {
+    // Faz a chamada para buscar as avaliações
+    this.googleReviewsService.getReviews().subscribe({
+      next: (response) => {
+        this.reviews = response.result.reviews || [];
+        this.isLoading = false;
+      },
+      error: (error) => {
+        this.errorMessage = 'Erro ao carregar as avaliações. Tente novamente mais tarde.';
+        this.isLoading = false;
+        console.error(error);
+      },
+    });
+  }
 }

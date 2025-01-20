@@ -11,7 +11,7 @@ html body {
   margin-left: 15px;
   margin-right: 15px;
   border-bottom: solid 4px transparent;
-  color: var(--light) !important;
+  color: var(--secondary) !important;
 }
 
 .nav-link:hover {
@@ -22,7 +22,7 @@ html body {
 .navbar-expand-lg {
   z-index: 9 !important;
   transition: top 0.6s ease-in-out !important;
-  background-color: #00000013;
+  background-color: #1f1f1f82 !important;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: background-color 0.3s ease-in-out;
@@ -45,7 +45,7 @@ nav.hidden {
 
   z-index: 999 !important;
   transition: top 0.6s ease-in-out !important;
-  background-color: #00000013;
+  /* background-color: #00000013; */
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: background-color 0.3s ease-in-out;
@@ -99,24 +99,8 @@ nav.hidden {
   /* Centraliza o conteúdo do ícone */
 }
 
-/* Contador de itens no carrinho */
-.cart-count {
-  margin-right: 5px;
-  font-weight: bold;
-  color: #000;
-}
-#cart-icon {
-  top: 10px;
-  left: 10px;
-  font-size: 24px;
-  background-color: #f4f4f433;
-  border: 1px solid #ffffff2b;
-  border-radius: 50px;
-  padding: 0px 10px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
+
+
 
 #logo {
   width: 7em;
@@ -126,12 +110,19 @@ nav.hidden {
   font-weight: bold;
 }
 
+ul {
+  list-style-type: none;
+  /* Remove os marcadores */
+  padding-left: 0;
+  /* Remove o recuo */
+}
+
 
 
 
 @media (max-width : 998px) {
   .side-bar {
-    background: var(--secondary-light);
+    background: var(--light);
     position: fixed;
     top: 0;
     left: 0;
@@ -140,8 +131,8 @@ nav.hidden {
     padding: 20px 0;
     opacity: 100%;
     transition: all 0.5s ease;
-    z-index: 10;
-    margin-top: 89px;
+    z-index: 1000;
+    /* margin-top: 89px; */
   }
 
   #ajustes {
@@ -163,10 +154,25 @@ nav.hidden {
     transform: translateX(-50%);
     /* Garante que o logo esteja perfeitamente centralizado */
   }
+
   #big-screen {
-   display: none!important;
+    display: none !important;
   }
 
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Cor semitransparente */
+    backdrop-filter: blur(5px);
+    /* Aplica o desfoque */
+    z-index: 999;
+    /* Fica acima do conteúdo */
+    /* display: none; */
+  }
 }
 
 
@@ -209,9 +215,6 @@ nav.hidden {
 
   }
 
-
-
-
   #ajustes {
     display: flex;
     justify-content: space-between;
@@ -219,4 +222,22 @@ nav.hidden {
     margin: 0px 10px 0px 10px;
   }
 
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Cor semitransparente */
+    backdrop-filter: blur(5px);
+    /* Aplica o desfoque */
+    z-index: 999;
+    /* Fica acima do conteúdo */
+    /* display: none; */
+  }
+
+  .overlay {
+    display: none;
+  }
 }

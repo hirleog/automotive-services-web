@@ -96,7 +96,7 @@ export class CartComponent implements OnInit {
 
     this.cartService.getItems().subscribe(items => {
       items.map((element, index) => {
-        cardElements += `${index + 1}x ${element.title} - R$${element.price} %0A`;
+        cardElements += `${index + 1} - ${element.title} - R$${element.price} %0A`;
 
       });
     });
