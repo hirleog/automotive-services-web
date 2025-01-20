@@ -13,6 +13,8 @@ export class ServicesComponent implements OnInit {
   public showAlert: boolean = false; 
 
   public cards: Array<Product> = []
+  public alertIndicator: boolean = false;
+  
   constructor(private cartService: CartService) {
     this.cards = [
       {
@@ -83,12 +85,13 @@ export class ServicesComponent implements OnInit {
   public addToCart(product: any): void {
     this.cartService.addItem(product).subscribe((response) => {
       this.alertMessage = response.message;
+      this.alertIndicator = response.success;
       this.showAlert = true;
 
-      // Oculta o alerta após 3 segundos
+      // Oculta o alerta após 2 segundos
       setTimeout(() => {
         this.showAlert = false;
-      }, 3000);
+      }, 1500);
     });
   }
 

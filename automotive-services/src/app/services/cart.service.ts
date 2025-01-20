@@ -45,7 +45,7 @@ export class CartService {
       } else {
         this.itemCard.push(product);
         this.updateCartState(); // Atualiza o estado do carrinho
-        return of({ success: true, message: 'Produto adicionado ao carrinho com sucesso!' });
+        return of({ success: true, message: 'Produto adicionado ao carrinho!' });
       }
     }
 

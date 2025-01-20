@@ -1,5 +1,4 @@
 #services {
-  /* margin-top: 5em; */
   margin-top: -3em;
   padding: 4em 0em 4em 0em;
   /* background-color: var(--light); */
@@ -180,7 +179,7 @@ p {
 }
 
 .price {
-  font-size: 1em;
+  /* font-size: 2em; */
   color: #28a745;
   font-weight: bold;
 }
@@ -231,13 +230,25 @@ p {
   margin: 1em;
 }
 
-.alert {
+.alert-sucess {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1050;
+  background-color: rgb(0, 225, 0);
+  border-radius: 10em;
+  border: 1px solid rgb(0, 225, 0);
+  color: var(--secondary);
+}
+.alert-error {
   position: fixed;
   top: 10px;
   right: 10px;
   z-index: 1050;
   background-color: var(--primary);
   border-radius: 10em;
+  border: 1px solid var(--primary);
+  color: var(--secondary);
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {

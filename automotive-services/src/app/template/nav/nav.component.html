@@ -31,39 +31,40 @@
 
 <nav id="big-screen" class="d-none d-lg-block navbar-light navbar navbar-expand-lg">
 
-  <div id="logo">
-    <a href="#inicio">
-      <img src="../../../assets/molinari-logo.webp" class="container-fluid" alt="error" />
-    </a>
-  </div>
-
-  <div class=" ">
-    <ul class="big-screen-nav me-auto mb-lg-0 ">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#home">Página Inicial</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#about">Sobre</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#services">Serviços</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#reviews">Clientes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#contato">Contato</a>
-      </li>
-    </ul>
-  </div>
-
-  <ng-container>
-    <div id="cart-icon" style="z-index: 10;" (click)="abrirCarrinho()">
-      <span class="cart-count" style="color: var(--primary);">{{ itemCount }}</span>
-      🛒
+  <div class="container">
+    <div id="logo">
+      <a href="#inicio">
+        <img src="../../../assets/molinari-logo.webp" class="container-fluid" alt="error" />
+      </a>
     </div>
-  </ng-container>
 
+    <div class=" ">
+      <ul class="big-screen-nav me-auto mb-lg-0 ">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#home">Página Inicial</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#about">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#services">Serviços</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#reviews">Clientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#contato">Contato</a>
+        </li>
+      </ul>
+    </div>
+
+    <ng-container>
+      <div id="cart-icon" style="z-index: 10;" (click)="abrirCarrinho()">
+        <span class="cart-count" style="color: var(--primary);">{{ itemCount }}</span>
+        🛒
+      </div>
+    </ng-container>
+  </div>
 </nav>
 
 <div data-aos="fade-right" class="side-bar" *ngIf="openClose">

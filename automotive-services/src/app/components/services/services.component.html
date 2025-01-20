@@ -1,6 +1,6 @@
 <section id="services">
 
-  <div class="container spacement">
+  <div class="container spacement" style="margin-top: 5em;">
 
     <div data-aos="fade-right">
       <div id="content-section" class="content container">
@@ -46,8 +46,8 @@
                   </button>
                 </div>
                 <div>
-                  <p class="price">
-                    <i class="fas fa-dollar-sign"></i> {{ card.price }}
+                  <p class="price" style="font-size: 25px;">
+                    R$ {{ card.price }}
                   </p>
                 </div>
               </div>
@@ -66,7 +66,7 @@
 </section>
 
 <!-- ALERTAS -->
-<div class="alert alert-info alert-dismissible fade show z-index-1000" *ngIf="showAlert" role="alert">
+<div  [ngClass]="alertIndicator === true ? 'alert-sucess' : 'alert-error'" class="alert alert-info alert-dismissible fade show z-index-1000" *ngIf="showAlert" role="alert">
   {{ alertMessage }}
   <button type="button" class="btn-close" (click)="showAlert = false" aria-label="Close"></button>
 </div>
